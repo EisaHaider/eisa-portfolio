@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Eisa Haider
+        {% endblock %}
+    </title>
+
+    <meta name="description"
+          content="Eisa Haider - Information Systems Architect">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/output.css') }}">
+
+    <style>
+
+        :root {
+
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --card-bg: #111827;
+
+            --text-primary: #ffffff;
+            --text-secondary: #cbd5e1;
+
+            --border-color: #334155;
+
+        }
+
+        html.light {
+
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --card-bg: #ffffff;
+
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+
+            --border-color: #cbd5e1;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            background: var(--bg-primary);
+            color: var(--text-primary);
+
+            transition:
+                background-color .3s ease,
+                color .3s ease;
+
+            font-family: "Manrope", sans-serif;
+
+        }
+
+        html[dir="rtl"] body {
+
+            font-family:
+                "IBM Plex Sans Arabic",
+                sans-serif;
+
+        }
+
+        .container-custom {
+
+            max-width: 1280px;
+            margin: auto;
+
+        }
+
+        .card {
+
+            background: var(--card-bg);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 24px;
+
+            transition: .25s ease;
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-4px);
+
+        }
+
+        .section-title {
+
+            font-size: 2rem;
+            font-weight: 700;
+
+        }
+
+        .section-spacing {
+
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+
+        }
+
+        .fade-up {
+
+            opacity: 0;
+            transform: translateY(20px);
+
+        }
+
+        .fade-up.show {
+
+            opacity: 1;
+            transform: translateY(0);
+
+            transition:
+                opacity .6s ease,
+                transform .6s ease;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,26 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eisa Haider</title>
+{% extends "base.html" %}
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+{% block title %}
+Eisa Haider | Information Systems Architect
+{% endblock %}
 
-    <section class="hero">
+{% block content %}
 
-        <h1>Eisa Haider</h1>
+<div class="min-h-screen">
 
-        <p>
-            Information Technology Officer
-            | Systems Developer
-            | Python & Flask
-        </p>
+```
+<!-- Navigation -->
 
-    </section>
+<nav class="sticky top-0 z-50 backdrop-blur border-b"
+     style="background:var(--bg-primary);border-color:var(--border-color);">
 
-</body>
-</html>
+    <div class="container-custom px-6">
+
+        <div class="flex items-center justify-between h-20">
+
+            <div class="text-xl font-bold">
+                Eisa Haider
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <a href="#profile"
+                   data-i18n="nav_profile">
+                    Profile
+                </a>
+
+                <a href="#projects"
+                   data-i18n="nav_projects">
+                    Projects
+                </a>
+
+                <a href="#domains"
+                   data-i18n="nav_domains">
+                    Domains
+                </a>
+
+                <a href="#insights"
+                   data-i18n="nav_insights">
+                    Insights
+                </a>
+
+                <a href="#contact"
+                   data-i18n="nav_contact">
+                    Contact
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-3">
+
+                <button id="language-toggle"
+                        class="px-4 py-2 rounded-xl border">
+                    EN | AR
+                </button>
+
+                <button id="theme-toggle"
+                        class="px-4 py-2 rounded-xl border">
+                    ☀︎ / 🌙
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="container-custom px-6">
+
+    <div class="grid lg:grid-cols-2 gap-16 min-h-[85vh] items-center">
+
+        <div class="fade-up">
+
+            <p class="uppercase tracking-[0.3em] opacity-60 mb-5"
+               data-i18n="hero_title">
+
+                Information Systems Architect
+
+            </p>
+
+            <h1 class="text-5xl lg:text-7xl font-bold mb-8">
+
+                Eisa Haider
+
+            </h1>
+
+            <p class="text-xl max-w-2xl opacity-80 leading-relaxed"
+               data-i18n="hero_text">
+
+                Designing business applications,
+                document management solutions,
+                and digital transformation initiatives.
+
+            </p>
+
+            <div class="flex gap-4 mt-10 flex-wrap">
+
+                <a href="#profile"
+                   data-i18n="btn_profile"
+                   class="px-6 py-3 rounded-xl bg-white text-slate-900">
+                    Professional Profile
+                </a>
+
+                <a href="#projects"
+                   data-i18n="btn_projects"
+                   class="px-6 py-3 rounded-xl border">
+                    Selected Projects
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="fade-up">
+
+            <div class="card p-8">
+
+                <h2 class="text-2xl font-bold mb-8"
+                    data-i18n="domains_title">
+
+                    Professional Domains
+
+                </h2>
+
+                <div class="grid gap-4">
+
+                    <div class="card p-4" data-i18n="domain_1">
+                        Enterprise Information Systems
+                    </div>
+
+                    <div class="card p-4" data-i18n="domain_2">
+                        Document Management
+                    </div>
+
+                    <div class="card p-4" data-i18n="domain_3">
+                        Workflow Automation
+                    </div>
+
+                    <div class="card p-4" data-i18n="domain_4">
+                        Digital Transformation
+                    </div>
+
+                    <div class="card p-4" data-i18n="domain_5">
+                        Python Development
+                    </div>
+
+                    <div class="card p-4" data-i18n="domain_6">
+                        Cloud Solutions
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Executive Summary -->
+
+<section id="profile"
+         class="container-custom px-6 section-spacing">
+
+    <h2 class="section-title mb-10"
+        data-i18n="summary_title">
+        Executive Summary
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="card p-8">
+            <div class="text-4xl font-bold">13+</div>
+            <div class="mt-2 opacity-70">
+                Years in Information Systems
+            </div>
+        </div>
+
+        <div class="card p-8">
+            <div class="text-4xl font-bold">15+</div>
+            <div class="mt-2 opacity-70">
+                Years Publishing Online
+            </div>
+        </div>
+
+        <div class="card p-8">
+            <div class="text-4xl font-bold">Python</div>
+            <div class="mt-2 opacity-70">
+                Flask Development
+            </div>
+        </div>
+
+        <div class="card p-8">
+            <div class="text-4xl font-bold">
+                Enterprise
+            </div>
+            <div class="mt-2 opacity-70">
+                Solutions Design
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects"
+         class="container-custom px-6 section-spacing">
+
+    <h2 class="section-title mb-10"
+        data-i18n="projects_title">
+
+        Selected Projects & Initiatives
+
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="card p-8">
+            Document Management System
+        </div>
+
+        <div class="card p-8">
+            Property Management Platform
+        </div>
+
+        <div class="card p-8">
+            Workflow Automation Solutions
+        </div>
+
+        <div class="card p-8">
+            Business Applications
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Domains -->
+
+<section id="domains"
+         class="container-custom px-6 section-spacing">
+
+    <h2 class="section-title mb-10">
+        Professional Domains
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="card p-8">
+            Information Systems
+        </div>
+
+        <div class="card p-8">
+            Digital Transformation
+        </div>
+
+        <div class="card p-8">
+            Document Management
+        </div>
+
+        <div class="card p-8">
+            Python Development
+        </div>
+
+        <div class="card p-8">
+            Process Automation
+        </div>
+
+        <div class="card p-8">
+            Cloud Solutions
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Insights -->
+
+<section id="insights"
+         class="container-custom px-6 section-spacing">
+
+    <h2 class="section-title mb-10"
+        data-i18n="insights_title">
+
+        Insights
+
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="card p-6">
+            Technology
+        </div>
+
+        <div class="card p-6">
+            Software Development
+        </div>
+
+        <div class="card p-6">
+            Running
+        </div>
+
+        <div class="card p-6">
+            Health & Nutrition
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact"
+         class="container-custom px-6 section-spacing">
+
+    <div class="card p-10">
+
+        <h2 class="section-title mb-6"
+            data-i18n="contact_title">
+
+            Contact
+
+        </h2>
+
+        <div class="space-y-3">
+
+            <div>Email</div>
+
+            <div>LinkedIn</div>
+
+            <div>GitHub</div>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+</div>
+
+{% endblock %}
