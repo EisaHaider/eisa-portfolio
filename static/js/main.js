@@ -13,7 +13,7 @@ const translations = {
         hero_title: "Information Systems Architect",
 
         hero_text:
-            "Designing business applications, document management solutions, and digital transformation initiatives.",
+            "Designing business applications, leading digital transformation initiatives, and developing modern information systems.",
 
         btn_profile: "Professional Profile",
         btn_projects: "Selected Projects",
@@ -24,7 +24,7 @@ const translations = {
         domain_2: "Document Management",
         domain_3: "Workflow Automation",
         domain_4: "Digital Transformation",
-        domain_5: "Python Development",
+        domain_5: "Rapid Application Development",
         domain_6: "Cloud Solutions",
 
         summary_title: "Executive Summary",
@@ -47,13 +47,13 @@ const translations = {
         nav_profile: "الملف المهني",
         nav_projects: "المشاريع",
         nav_domains: "المجالات",
-        nav_insights: "المقالات",
+        nav_insights: "الاهتمامات",
         nav_contact: "التواصل",
 
-        hero_title: "مهندس نظم معلومات",
+        hero_title: "محلل نظم معلومات",
 
         hero_text:
-            "تطوير تطبيقات الأعمال وحلول إدارة الوثائق ومبادرات التحول الرقمي.",
+            "تطوير تطبيقات الأعمال، ومبادرات التحول الرقمي، وتطوير أنظمة المعلومات.",
 
         btn_profile: "الملف المهني",
         btn_projects: "المشاريع المختارة",
@@ -64,14 +64,14 @@ const translations = {
         domain_2: "إدارة الوثائق",
         domain_3: "أتمتة الإجراءات",
         domain_4: "التحول الرقمي",
-        domain_5: "تطوير بايثون",
+        domain_5: "تطوير البرمجيات",
         domain_6: "الحلول السحابية",
 
         summary_title: "الملخص المهني",
 
         projects_title: "المشاريع والمبادرات",
 
-        insights_title: "المقالات والاهتمامات",
+        insights_title: "الاهتمامات",
 
         contact_title: "التواصل",
 
