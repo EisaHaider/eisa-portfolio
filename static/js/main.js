@@ -7,10 +7,10 @@ const translations = {
         nav_profile: "Profile",
         nav_projects: "Projects",
         nav_domains: "Domains",
-        nav_insights: "Insights",
+        nav_insights: "Areas of Interest",
         nav_contact: "Contact",
 
-        hero_title: "Information Systems Architect",
+        hero_title: "Systems Analyst & Custom Application Developer",
 
         hero_text:
             "Designing business applications, leading digital transformation initiatives, and developing modern information systems.",
@@ -21,22 +21,56 @@ const translations = {
         domains_title: "Professional Domains",
 
         domain_1: "Enterprise Information Systems",
-        domain_2: "Document Management",
+        domain_2: "Custom Application Development",
         domain_3: "Workflow Automation",
-        domain_4: "Digital Transformation",
-        domain_5: "Rapid Application Development",
-        domain_6: "Cloud Solutions",
+        domain_4: "Document Management Solutions",
+        domain_5: "Cloud-Native Solutions",
+        domain_6: "Digital Skills Training",
 
         summary_title: "Executive Summary",
 
+        // نصوص الإحصائيات (Executive Summary)
+        stat_years_systems_num: "13+",
+        stat_years_systems_text: "Years in Information Systems",
+        stat_years_blog_num: "15+",
+        stat_years_blog_text: "Years Publishing Online",
+        stat_flask_num: "Python",
+        stat_flask_text: "Flask Development",
+        stat_enterprise_num: "Enterprise",
+        stat_enterprise_text: "Solutions Design",
+
         projects_title: "Selected Projects & Initiatives",
+        
+        // نصوص المشاريع المحدثة (العناوين والأوصاف بالإنجليزية)
+        project_1_title: "Document Management System",
+        project_1_desc: "Enterprise-scale document and records management platform.",
+        
+        project_2_title: "Electronic Medical Records System",
+        project_2_desc: "Healthcare information system for managing patient records.",
+        
+        project_3_title: "Workflow Automation Initiatives",
+        project_3_desc: "Process automation solutions for administrative and operational workflows.",
+        
+        project_4_title: "Custom Business Applications",
+        project_4_desc: "Tailored applications including property management, project tracking, and operational systems.",
 
-        insights_title: "Insights",
+        // نصوص اهتمامات Insights
+        insight_1: "Emerging Technologies",
+        insight_2: "User Experience",
+        insight_3: "Running",
+        insight_4: "Health & Nutrition",
 
+        // نصوص التواصل
+        contact_email: "E-mail",
+        contact_email_url: "mailto:eisa.haider@outlook.com", 
+        contact_linkedin: "LinkedIn",
+        contact_linkedin_url: "https://linkedin.com/in/eisa-haider", 
+        contact_github: "GitHub",
+        contact_github_url: "https://github.com/EisaHaider", 
+   
+        insights_title: "Areas of Interest",
         contact_title: "Contact",
-
         language_button: "EN | AR",
-
         theme_button: "Theme"
     },
 
@@ -47,10 +81,10 @@ const translations = {
         nav_profile: "الملف المهني",
         nav_projects: "المشاريع",
         nav_domains: "المجالات",
-        nav_insights: "الاهتمامات",
+        nav_insights: "مجالات الاهتمام",
         nav_contact: "التواصل",
 
-        hero_title: "محلل نظم معلومات",
+        hero_title: "محلل نظم ومطور تطبيقات مخصصة",
 
         hero_text:
             "تطوير تطبيقات الأعمال، ومبادرات التحول الرقمي، وتطوير أنظمة المعلومات.",
@@ -61,43 +95,85 @@ const translations = {
         domains_title: "المجالات المهنية",
 
         domain_1: "نظم المعلومات المؤسسية",
-        domain_2: "إدارة الوثائق",
-        domain_3: "أتمتة الإجراءات",
-        domain_4: "التحول الرقمي",
-        domain_5: "تطوير البرمجيات",
-        domain_6: "الحلول السحابية",
+        domain_2: "تطوير التطبيقات المخصصة",
+        domain_3: "أتمتة الإجراءات والعمليات",
+        domain_4: "حلول إدارة الوثائق",
+        domain_5: "الحلول السحابية",
+        domain_6: "تنمية المهارات الرقمية",
 
         summary_title: "الملخص المهني",
 
+        // نصوص الإحصائيات (Executive Summary)
+        stat_years_systems_num: "20",
+        stat_years_systems_text: "عاماً في نظم المعلومات",
+        stat_years_blog_num: "+15",
+        stat_years_blog_text: "عاماً من النشر الإلكتروني",
+        stat_flask_num: "بايثون",
+        stat_flask_text: "تطوير باستخدام Flask",
+        stat_enterprise_num: "المؤسسات",
+        stat_enterprise_text: "تصميم الحلول البرمجية",
+
         projects_title: "المشاريع والمبادرات",
 
-        insights_title: "الاهتمامات",
+        // نصوص المشاريع المحدثة (العناوين والأوصاف بالعربية)
+        project_1_title: "نظام إدارة الوثائق DMS",
+        project_1_desc: "منصة متكاملة على مستوى المؤسسات لإدارة الوثائق والأرشفة والسجلات الإلكترونية.",
 
+        project_2_title: "نظام السجلات الطبية الإلكترونية EMR",
+        project_2_desc: "نظام معلومات صحي متقدم لإدارة السجلات الطبية وبيانات المرضى بكفاءة وأمان.",
+
+        project_3_title: "حلول أتمتة إجراءات العمل",
+        project_3_desc: "حلول برمجية ذكية لأتمتة سير العمليات الإدارية والتشغيلية وتقليص الهدر الزمني.",
+
+        project_4_title: "تطبيقات أعمال مخصصة",
+        project_4_desc: "تطبيقات مصممة بدقة حسب الطلب تشمل إدارة العقارات، تتبع المشاريع، والأنظمة التشغيلية المخصصة.",
+
+        // نصوص اهتمامات Insights
+        insight_1: "التقنيات الناشئة",
+        insight_2: "تجربة المستخدم",
+        insight_3: "الجري",
+        insight_4: "الصحة والتغذية",
+
+        // نصوص التواصل
+        contact_email: "البريد الإلكتروني",
+        contact_email_url: "mailto:eisa.haider@outlook.com",
+        contact_linkedin: "LinkedIn",
+        contact_linkedin_url: "https://linkedin.com/in/eisa-haider",
+        contact_github: "GitHub",
+        contact_github_url: "https://github.com/EisaHaider",
+
+        insights_title: "مجالات الاهتمام",
         contact_title: "التواصل",
-
         language_button: "EN | AR",
-
         theme_button: "المظهر"
     }
 
 };
 
 function updateTexts(lang) {
-
+    // 1. تحديث النصوص فقط للعناصر التي تحمل وسم الترجمة (مثل الـ span والعناوين)
     document.querySelectorAll("[data-i18n]").forEach(el => {
-
         const key = el.dataset.i18n;
-
         if (translations[lang][key]) {
-
-            el.textContent =
-                translations[lang][key];
-
+            el.textContent = translations[lang][key];
         }
-
     });
 
+    // 2. تحديث الروابط (href) فقط للعناصر التي تحمل وسم الرابط المخصص
+    document.querySelectorAll("[data-i18n-url]").forEach(el => {
+        const key = el.dataset.i18nUrl;
+        const urlKey = `${key}_url`;
+        if (translations[lang][urlKey]) {
+            el.href = translations[lang][urlKey];
+        }
+    });
+
+    // 3. إعادة رسم الأيقونات بأمان دون مساسها برمجياً
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+    }
 }
+
 
 function applyLanguage(lang) {
 
@@ -248,7 +324,10 @@ document.addEventListener(
 
         }
 
-        revealElements();
+        if (typeof lucide !== "undefined") {
+              lucide.createIcons();
+        }
 
+        revealElements();
     }
 );
