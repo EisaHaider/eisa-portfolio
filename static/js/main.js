@@ -20,7 +20,7 @@ const translations = {
 
         domains_title: "Professional Domains",
 
-        domain_1: "Enterprise Information Systems",
+        domain_1: "Enterprise Information Systems Analysis",
         domain_2: "Custom Application Development",
         domain_3: "Workflow Automation",
         domain_4: "Document Management Solutions",
@@ -71,7 +71,20 @@ const translations = {
         insights_title: "Areas of Interest",
         contact_title: "Contact",
         language_button: "EN | AR",
-        theme_button: "Theme"
+        theme_button: "Theme", // تم إصلاح علامة التنصيص الزائدة هنا
+
+        tech_backend: "Backend Development",
+        tech_frontend: "Responsive UI Design",
+        tech_interactivity: "Client-Side Interactivity",
+        tech_version: "Version Control",
+        tech_hosting: "Cloud Deployment",
+
+        platform_subtitle: "This platform was designed, developed, and deployed using modern web technologies and cloud services.",
+        tech_backend: "Backend Development",
+        tech_frontend: "Responsive Design",
+        tech_interactivity: "Localization & Interactivity",
+        tech_version: "Version Control",
+        tech_hosting: "Cloud Deployment"
     },
 
     ar: {
@@ -94,7 +107,7 @@ const translations = {
 
         domains_title: "المجالات المهنية",
 
-        domain_1: "نظم المعلومات المؤسسية",
+        domain_1: "تحليل نظم المعلومات المؤسسية",
         domain_2: "تطوير التطبيقات المخصصة",
         domain_3: "أتمتة الإجراءات والعمليات",
         domain_4: "حلول إدارة الوثائق",
@@ -145,7 +158,14 @@ const translations = {
         insights_title: "مجالات الاهتمام",
         contact_title: "التواصل",
         language_button: "EN | AR",
-        theme_button: "المظهر"
+        theme_button: "المظهر",
+
+        platform_subtitle: "تم تصميم هذه المنصة، وتطويرها، ونشرها سحابياً بالاعتماد على تقنيات الويب الحديثة والخدمات السحابية.",
+        tech_backend: "تطوير الواجهة الخلفية",
+        tech_frontend: "التصميم المتجاوب",
+        tech_interactivity: "تعدد اللغات والتفاعل",
+        tech_version: "إدارة الإصدارات ",
+        tech_hosting: "النشر السحابي"
     }
 
 };
