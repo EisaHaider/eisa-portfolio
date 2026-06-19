@@ -77,7 +77,7 @@ contact_title: "Contact",
         theme_button: "Theme",
 
         // نصوص قسم معمارية المنصة الموحدة
-        platform_subtitle: "This platform was designed, developed, and deployed using modern web technologies and cloud services.",
+        platform_title: "Built with",
         tech_backend: "Backend Development",
         tech_frontend: "Responsive Design",
         tech_interactivity: "Localization & Interactivity",
@@ -88,7 +88,9 @@ contact_title: "Contact",
         contact_subtitle: "Let's build something exceptional together. Feel free to reach out via any of the platforms below.",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالإنجليزية
-        summary_description: "An experienced information systems specialist and senior analyst expert in designing and developing software systems, database-driven custom applications, automating workflows, and optimizing digital environments."
+        summary_description: "An experienced information systems specialist and senior analyst expert in designing and developing software systems, database-driven custom applications, automating workflows, and optimizing digital environments.",
+
+        copyright_text: "© 2026 Eisa Haider. All rights reserved."
     },
 
     ar: {
@@ -167,7 +169,7 @@ contact_title: "Contact",
         language_button: "EN | AR",
         theme_button: "المظهر",
 
-        platform_subtitle: "تم تصميم هذه المنصة، وتطويرها، ونشرها سحابياً بالاعتماد على تقنيات الويب الحديثة والخدمات السحابية.",
+        platform_title: "بُنيت بواسطة",
         tech_backend: "تطوير الواجهة الخلفية",
         tech_frontend: "التصميم المتجاوب",
         tech_interactivity: "تعدد اللغات والتفاعل",
@@ -178,7 +180,9 @@ contact_title: "Contact",
         contact_subtitle: "لنصنع شيئاً استثنائياً معاً. يسعدني تواصلك عبر أي من المنصات التالية.",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالعربية
-        summary_description: "إخصائي نظم معلومات ومحلل أول متمرس في تصميم وتطوير النظم البرمجية، وتطوير التطبيقات المعتمدة على قواعد البيانات، وأتمتة الإجراءات وتحسين بيئات العمل الرقمية."
+        summary_description: "إخصائي نظم معلومات ومحلل أول متمرس في تصميم وتطوير النظم البرمجية، وتطوير التطبيقات المعتمدة على قواعد البيانات، وأتمتة الإجراءات وتحسين بيئات العمل الرقمية.",
+
+         copyright_text: "© 2026 عيسى حيدر. جميع الحقوق محفوظة."
     }
 
 };
