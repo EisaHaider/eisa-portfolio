@@ -6,24 +6,34 @@ const translations = {
 
         nav_profile: "Profile",
         nav_projects: "Projects",
-        nav_domains: "Domains",
+        nav_domains: "Areas of Expertise",
         nav_insights: "Areas of Interest",
         nav_contact: "Contact",
 
         hero_title: "Systems Analyst & Custom Application Developer",
 
         hero_text:
-            "Designing business applications, leading digital transformation initiatives, and developing modern information systems.",
+            "I design and build internal business systems that organize data, automate workflows, and turn operational complexity into usable digital tools.",
 
         btn_profile: "Professional Profile",
         btn_projects: "Selected Projects",
 
-        domains_title: "Professional Domains",
+
+        hero_flow_subtitle: "System Lifecycle",
+        hero_flow_title: "From Idea to Solution",
+        hero_step1_title: "Analyze",
+        hero_step1_desc: "Business Requirements",
+        hero_step2_title: "Design",
+        hero_step2_desc: "Enterprise Solutions",
+        hero_step3_title: "Deliver",
+        hero_step3_desc: "Reliable Applications",
+
+        domains_title: "Areas of Expertise",
 
         domain_1: "Enterprise Information Systems Analysis",
         domain_2: "Custom Application Development",
         domain_3: "Workflow Automation",
-        domain_4: "Document Management Solutions",
+        domain_4: "Enterprise Information Management",
         domain_5: "Cloud-Native Solutions",
         domain_6: "Digital Skills Training",
 
@@ -62,8 +72,8 @@ const translations = {
         insight_4: "Health & Nutrition",
 
         // نصوص التواصل
-contact_title: "Contact",
-        contact_subtitle: "Let's build something exceptional together. Feel free to reach out via any of the platforms below.",
+        contact_title: "Contact",
+        contact_subtitle: "Available for custom business applications, workflow automation, and information systems consulting.",
         contact_email: "E-mail",
         contact_email_url: "mailto:eisa.haider@outlook.com",
         contact_whatsapp: "WhatsApp",
@@ -77,18 +87,25 @@ contact_title: "Contact",
         theme_button: "Theme",
 
         // نصوص قسم معمارية المنصة الموحدة
-        platform_title: "Built with",
+     /*    platform_title: "Built with",
         tech_backend: "Backend Development",
-        tech_frontend: "Responsive Design",
-        tech_interactivity: "Localization & Interactivity",
+        tech_frontend: "Responsive UI",
+        tech_interactivity: "Client-Side Interactivity",
         tech_version: "Version Control",
-        tech_hosting: "Cloud Deployment",
+        tech_hosting: "Cloud Deployment", */
 
-        contact_title: "Contact",
-        contact_subtitle: "Let's build something exceptional together. Feel free to reach out via any of the platforms below.",
+
+        platform_label: "Built as a real product",
+        platform_title: "Built as a working Flask portfolio",
+        platform_desc: "A lightweight, responsive portfolio with structured content, interactive behavior, and cloud-ready deployment.",
+
+        tech_backend: "Application routing, templates, content structure, and server-side organization.",
+        tech_frontend: "Responsive interface, consistent spacing, reusable utility-first styling.",
+        tech_interactivity: "Language switching, motion states, navigation behavior, and UI feedback.",
+        tech_hosting: "Container-ready deployment approach designed for reliable cloud delivery.",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالإنجليزية
-        summary_description: "An experienced information systems specialist and senior analyst expert in designing and developing software systems, database-driven custom applications, automating workflows, and optimizing digital environments.",
+        summary_description: "An experienced information systems professional and senior analyst expert in designing and developing software systems, database-driven custom applications, automating workflows, and optimizing digital environments.",
 
         copyright_text: "© 2026 Eisa Haider. All rights reserved."
     },
@@ -99,26 +116,39 @@ contact_title: "Contact",
 
         nav_profile: "الملف المهني",
         nav_projects: "المشاريع",
-        nav_domains: "المجالات",
+        nav_domains: "مجالات الخبرة",
         nav_insights: "مجالات الاهتمام",
         nav_contact: "التواصل",
 
         hero_title: "محلل نظم ومطور تطبيقات مخصصة",
 
         hero_text:
-            "تتطوير تطبيقات الأعمال، ومبادرات التحول الرقمي، وتتطوير أنظمة المعلومات.",
+            "أصمم وأطور أنظمة أعمال داخلية تنظّم البيانات، وتؤتمت الإجراءات، وتحول التعقيد التشغيلي إلى أدوات رقمية عملية.",
 
         btn_profile: "الملف المهني",
         btn_projects: "المشاريع المختارة",
 
-        domains_title: "المجالات المهنية",
+        domains_title: "مجالات الخبرة",
 
         domain_1: "تحليل نظم المعلومات المؤسسية",
         domain_2: "تطوير التطبيقات المخصصة",
         domain_3: "أتمتة الإجراءات والعمليات",
-        domain_4: "حلول إدارة الوثائق",
+        domain_4: "إدارة المعلومات المؤسسية",
         domain_5: "الحلول السحابية",
         domain_6: "تنمية المهارات الرقمية",
+
+      
+
+
+
+        hero_flow_subtitle: "دورة حياة الأنظمة",
+        hero_flow_title: "من الفكرة إلى الحل المتكامل",
+        hero_step1_title: "التحليل",
+        hero_step1_desc: "متطلبات الأعمال",
+        hero_step2_title: "التصميم",
+        hero_step2_desc: "الحلول البرمجية المؤسسية",
+        hero_step3_title: "التطوير والتسليم",
+        hero_step3_desc: "التطبيقات والأنظمة الموثوقة",
 
         summary_title: "الملف المهني",
 
@@ -155,8 +185,8 @@ contact_title: "Contact",
         insight_4: "الصحة والتغذية",
 
         // نصوص التواصل
-  contact_title: "التواصل",
-        contact_subtitle: "لنصنع شيئاً استثنائياً معاً. يسعدني تواصلك عبر أي من المنصات التالية.",
+        contact_title: "التواصل",
+        contact_subtitle: "متاح لتطوير تطبيقات أعمال مخصصة، وأتمتة إجراءات العمل، واستشارات نظم المعلومات.",
         contact_email: "البريد الإلكتروني",
         contact_email_url: "mailto:eisa.haider@outlook.com",
         contact_whatsapp: "WhatsApp",
@@ -169,18 +199,25 @@ contact_title: "Contact",
         language_button: "EN | AR",
         theme_button: "المظهر",
 
-        platform_title: "بُنيت بواسطة",
+/*         platform_title: "بُنيت بواسطة",
         tech_backend: "تطوير الواجهة الخلفية",
-        tech_frontend: "التصميم المتجاوب",
-        tech_interactivity: "تعدد اللغات والتفاعل",
+        tech_frontend: "واجهة مستخدم متجاوبة",
+        tech_interactivity: "التفاعلية البرمجية للمستخدم",
         tech_version: "إدارة الإصدارات ",
         tech_hosting: "النشر السحابي",
+ */
 
-        contact_title: "التواصل",
-        contact_subtitle: "لنصنع شيئاً استثنائياً معاً. يسعدني تواصلك عبر أي من المنصات التالية.",
+        platform_label: "بُني كمشروع فعلي",
+        platform_title: "ملف مهني مبني كتطبيق Flask فعلي",
+        platform_desc: "واجهة خفيفة ومتجاوبة بمحتوى منظم، وتفاعل برمجي، وتجهيز مناسب للنشر السحابي.",
+
+        tech_backend: "تنظيم المسارات والقوالب وبنية المحتوى من جهة الخادم.",
+        tech_frontend: "واجهة متجاوبة ومسافات دقيقة وتصميم مبني بأسلوب utility-first.",
+        tech_interactivity: "تبديل اللغة والمظهر وحالات الحركة وسلوكيات الواجهة.",
+        tech_hosting: "منهجية نشر جاهزة للحاويات ومناسبة للتشغيل السحابي الموثوق.",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالعربية
-        summary_description: "إخصائي نظم معلومات ومحلل أول متمرس في تصميم وتطوير النظم البرمجية، وتطوير التطبيقات المعتمدة على قواعد البيانات، وأتمتة الإجراءات وتحسين بيئات العمل الرقمية.",
+        summary_description: "أخصائي نظم معلومات ومحلل أول متمرس في تصميم وتطوير النظم البرمجية، وتطوير التطبيقات المعتمدة على قواعد البيانات، وأتمتة الإجراءات وتحسين بيئات العمل الرقمية.",
 
          copyright_text: "© 2026 عيسى حيدر. جميع الحقوق محفوظة."
     }

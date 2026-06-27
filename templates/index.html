@@ -50,50 +50,114 @@ Eisa Haider | Information Systems Architect
 
     </nav>
 
-    <section class="container-custom px-6">
+   <!-- Hero Section -->
+<section class="relative overflow-hidden container-custom px-6 py-10 lg:py-0">
 
-        <div class="grid lg:grid-cols-2 gap-16 min-h-[85vh] items-center">
+    <!-- خلفية زخرفية ناعمة -->
+    <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute top-20 end-10 w-72 h-72 rounded-full bg-white/5 blur-3xl"></div>
+        <div class="absolute bottom-10 start-10 w-64 h-64 rounded-full bg-cyan-400/10 blur-3xl"></div>
+    </div>
 
-            <div class="fade-up">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 min-h-[85vh] items-center">
 
-                <p class="uppercase tracking-[0.3em] opacity-60 mb-5" data-i18n="hero_title"></p>
+        <!-- الجانب الأيسر -->
+        <div class="fade-up max-w-2xl">
 
-                <h1 class="text-5xl lg:text-7xl font-bold mb-8">
-                    Eisa Haider
-                </h1>
+            <p class="uppercase tracking-[0.28em] text-xs sm:text-sm opacity-55 mb-5" data-i18n="hero_title"></p>
 
-                <p class="text-xl max-w-2xl opacity-80 leading-relaxed" data-i18n="hero_text"></p>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-7 leading-[0.95]">
+                Eisa Haider
+            </h1>
 
-                <div class="flex gap-4 mt-10 flex-wrap">
+            <p class="text-lg sm:text-xl max-w-xl opacity-75 leading-relaxed" data-i18n="hero_text"></p>
 
-                    <a href="#profile" data-i18n="btn_profile" class="px-6 py-3 rounded-xl bg-white text-slate-900"></a>
+            <div class="flex gap-4 mt-10 flex-wrap">
+                <a href="#profile"
+                   data-i18n="btn_profile"
+                   class="group inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-white text-slate-950 font-semibold shadow-lg shadow-black/10 hover:-translate-y-0.5 hover:shadow-xl transition-all">
+                </a>
 
-                    <a href="#projects" data-i18n="btn_projects" class="px-6 py-3 rounded-xl border"></a>
-
-                </div>
-
+                <a href="#projects"
+                   data-i18n="btn_projects"
+                   class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg border font-medium hover:bg-white/7 hover:-translate-y-0.5 transition-all"
+                   style="border-color: var(--border-color);">
+                </a>
             </div>
 
-            <div class="fade-up">
+        </div>
 
-                <div class="card p-8">
+        <!-- الجانب الأيمن -->
+        <div class="fade-up">
 
-                    <h2 class="text-2xl font-bold mb-8" data-i18n="domains_title"></h2>
+            <div class="relative rounded-2xl border p-6 sm:p-8 bg-white/[0.035] backdrop-blur-xl shadow-2xl shadow-black/10"
+                 style="border-color: var(--border-color);">
 
-                    <div class="grid gap-4">
+                <!-- إطار داخلي خفيف -->
+                <div class="absolute inset-3 rounded-xl border opacity-40 pointer-events-none"
+                     style="border-color: var(--border-color);"></div>
 
-                        <div class="card p-4" data-i18n="domain_1"></div>
+                <!-- العنوان -->
+                <div class="relative mb-9 border-b pb-5" style="border-color: var(--border-color);">
+                    <span class="text-[11px] uppercase tracking-[0.25em] opacity-45 block mb-2"
+                          data-i18n="hero_flow_subtitle"></span>
 
-                        <div class="card p-4" data-i18n="domain_2"></div>
+                    <h2 class="text-2xl font-bold opacity-95 leading-tight"
+                        data-i18n="hero_flow_title"></h2>
+                </div>
 
-                        <div class="card p-4" data-i18n="domain_3"></div>
+                <!-- المراحل -->
+                <div class="relative space-y-5">
 
-                        <div class="card p-4" data-i18n="domain_4"></div>
+                    <div class="absolute top-5 bottom-5 start-5 w-px opacity-15"
+                         style="background-color: currentColor;"></div>
 
-                        <div class="card p-4" data-i18n="domain_5"></div>
+                    <!-- المرحلة الأولى -->
+                    <div class="group relative z-10 flex items-start gap-4 rounded-xl p-3 -mx-3 hover:bg-white/[0.045] transition-colors">
+                        <div class="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center border bg-white/[0.04] group-hover:bg-white/[0.08] group-hover:scale-105 transition-all"
+                             style="border-color: var(--border-color);">
+                            <i data-lucide="search" class="w-4.5 h-4.5 opacity-80"></i>
+                        </div>
 
-                        <div class="card p-4" data-i18n="domain_6"></div>
+                        <div class="pt-0.5">
+                            <span class="text-[11px] font-bold uppercase tracking-[0.18em] opacity-50 block"
+                                  data-i18n="hero_step1_title"></span>
 
+                            <h3 class="text-base sm:text-lg font-semibold opacity-95 mt-1 leading-snug"
+                                data-i18n="hero_step1_desc"></h3>
+                        </div>
+                    </div>
+
+                    <!-- المرحلة الثانية -->
+                    <div class="group relative z-10 flex items-start gap-4 rounded-xl p-3 -mx-3 hover:bg-white/[0.045] transition-colors">
+                        <div class="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center border bg-white/[0.04] group-hover:bg-white/[0.08] group-hover:scale-105 transition-all"
+                             style="border-color: var(--border-color);">
+                            <i data-lucide="layers" class="w-4.5 h-4.5 opacity-80"></i>
+                        </div>
+
+                        <div class="pt-0.5">
+                            <span class="text-[11px] font-bold uppercase tracking-[0.18em] opacity-50 block"
+                                  data-i18n="hero_step2_title"></span>
+
+                            <h3 class="text-base sm:text-lg font-semibold opacity-95 mt-1 leading-snug"
+                                data-i18n="hero_step2_desc"></h3>
+                        </div>
+                    </div>
+
+                    <!-- المرحلة الثالثة -->
+                    <div class="group relative z-10 flex items-start gap-4 rounded-xl p-3 -mx-3 hover:bg-white/[0.045] transition-colors">
+                        <div class="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center border bg-white/[0.04] group-hover:bg-white/[0.08] group-hover:scale-105 transition-all"
+                             style="border-color: var(--border-color);">
+                            <i data-lucide="shield-check" class="w-4.5 h-4.5 opacity-80"></i>
+                        </div>
+
+                        <div class="pt-0.5">
+                            <span class="text-[11px] font-bold uppercase tracking-[0.18em] opacity-50 block"
+                                  data-i18n="hero_step3_title"></span>
+
+                            <h3 class="text-base sm:text-lg font-semibold opacity-95 mt-1 leading-snug"
+                                data-i18n="hero_step3_desc"></h3>
+                        </div>
                     </div>
 
                 </div>
@@ -102,7 +166,9 @@ Eisa Haider | Information Systems Architect
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <section id="profile" class="container-custom px-6 section-spacing">
 
@@ -276,54 +342,76 @@ Eisa Haider | Information Systems Architect
 
     </section>
 
-<section id="platform" class="container-custom px-6 pb-16 pt-4">
+<section id="platform" class="container-custom px-6 pb-20 pt-6">
 
-        <div class="border-t opacity-10 mb-8" style="border-color:var(--border-color);"></div>
+    <div class="border-t opacity-10 mb-10" style="border-color:var(--border-color);"></div>
 
-        <div class="card p-5 max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-            
-            <div class="flex-shrink-0">
-                <h2 class="text-sm font-bold tracking-wider uppercase opacity-70" data-i18n="platform_title" style="background: linear-gradient(to right, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                </h2>
+    <div class="max-w-5xl mx-auto">
+
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-8">
+            <div>
+                <span class="text-[11px] uppercase tracking-[0.24em] opacity-45 block mb-3"
+                      data-i18n="platform_label"></span>
+
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight opacity-95"
+                    data-i18n="platform_title"></h2>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 w-full sm:w-auto flex-grow justify-items-center">
+            <p class="max-w-xl text-sm sm:text-base leading-relaxed opacity-60"
+               data-i18n="platform_desc"></p>
+        </div>
 
-                <div class="flex flex-col items-center justify-center text-center">
-                    <i data-lucide="server" class="w-4 h-4 mb-1 opacity-60 text-blue-400"></i>
-                    <h3 class="text-xs font-semibold">Python & Flask</h3>
-                    <p class="text-[10px] opacity-40" data-i18n="tech_backend"></p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+
+            <div class="group rounded-xl border p-5 bg-white/[0.025] hover:bg-white/[0.05] transition-all"
+                 style="border-color:var(--border-color);">
+                <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-5 bg-white/[0.035]"
+                     style="border-color:var(--border-color);">
+                    <i data-lucide="server" class="w-5 h-5 opacity-80"></i>
                 </div>
 
-                <div class="flex flex-col items-center justify-center text-center">
-                    <i data-lucide="palette" class="w-4 h-4 mb-1 opacity-60 text-purple-400"></i>
-                    <h3 class="text-xs font-semibold">Tailwind CSS</h3>
-                    <p class="text-[10px] opacity-40" data-i18n="tech_frontend"></p>
+                <h3 class="text-sm font-bold mb-2">Python & Flask</h3>
+                <p class="text-xs leading-relaxed opacity-55" data-i18n="tech_backend"></p>
+            </div>
+
+            <div class="group rounded-xl border p-5 bg-white/[0.025] hover:bg-white/[0.05] transition-all"
+                 style="border-color:var(--border-color);">
+                <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-5 bg-white/[0.035]"
+                     style="border-color:var(--border-color);">
+                    <i data-lucide="layout-template" class="w-5 h-5 opacity-80"></i>
                 </div>
 
-                <div class="flex flex-col items-center justify-center text-center">
-                    <i data-lucide="sparkles" class="w-4 h-4 mb-1 opacity-60 text-yellow-400"></i>
-                    <h3 class="text-xs font-semibold">JavaScript</h3>
-                    <p class="text-[10px] opacity-40" data-i18n="tech_interactivity"></p>
+                <h3 class="text-sm font-bold mb-2">Tailwind CSS</h3>
+                <p class="text-xs leading-relaxed opacity-55" data-i18n="tech_frontend"></p>
+            </div>
+
+            <div class="group rounded-xl border p-5 bg-white/[0.025] hover:bg-white/[0.05] transition-all"
+                 style="border-color:var(--border-color);">
+                <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-5 bg-white/[0.035]"
+                     style="border-color:var(--border-color);">
+                    <i data-lucide="mouse-pointer-click" class="w-5 h-5 opacity-80"></i>
                 </div>
 
-                <div class="flex flex-col items-center justify-center text-center">
-                    <i data-lucide="git-branch" class="w-4 h-4 mb-1 opacity-60 text-emerald-400"></i>
-                    <h3 class="text-xs font-semibold">Git & GitHub</h3>
-                    <p class="text-[10px] opacity-40" data-i18n="tech_version"></p>
+                <h3 class="text-sm font-bold mb-2">JavaScript</h3>
+                <p class="text-xs leading-relaxed opacity-55" data-i18n="tech_interactivity"></p>
+            </div>
+
+            <div class="group rounded-xl border p-5 bg-white/[0.025] hover:bg-white/[0.05] transition-all"
+                 style="border-color:var(--border-color);">
+                <div class="w-10 h-10 rounded-lg border flex items-center justify-center mb-5 bg-white/[0.035]"
+                     style="border-color:var(--border-color);">
+                    <i data-lucide="cloud" class="w-5 h-5 opacity-80"></i>
                 </div>
 
-                <div class="flex flex-col items-center justify-center text-center">
-                    <i data-lucide="cloud" class="w-4 h-4 mb-1 opacity-60 text-sky-400"></i>
-                    <h3 class="text-xs font-semibold">Google Cloud Run</h3>
-                    <p class="text-[10px] opacity-40" data-i18n="tech_hosting"></p>
-                </div>
-
+                <h3 class="text-sm font-bold mb-2">Google Cloud Run</h3>
+                <p class="text-xs leading-relaxed opacity-55" data-i18n="tech_hosting"></p>
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <footer class="py-8 text-center text-sm opacity-50" data-i18n="copyright_text">
     
