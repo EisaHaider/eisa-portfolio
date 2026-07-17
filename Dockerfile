@@ -1,28 +1,15 @@
-# Lightweight official Python image
+# استخدام نسخة بايثون رسمية وخفيفة
 FROM python:3.10-slim
 
-# Python runtime settings
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
-# Working directory
+# تحديد مجلد العمل داخل الحاوية الافتراضية لجوجل
 WORKDIR /workspace
 
-# Install dependencies
-COPY requirements.txt .
-RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+# نسخ ملف المكتبات وتثبيتها أولاً
+COPY requirements.txt /workspace/
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application
-COPY . .
+# نسخ بقية ملفات مشروع الفلاسك بالكامل
+COPY . /workspace/
 
-# Optional documentation
-EXPOSE 8080
-
-# Start Gunicorn
-CMD exec gunicorn \
-    --bind :$PORT \
-    --workers 1 \
-    --threads 8 \
-    --timeout 120 \
-    app:app
+# تشغيل التطبيق باستخدام Gunicorn (متوافق مع app = Flask(__name__) في ملف app.py)
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
