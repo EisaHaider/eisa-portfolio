@@ -7,26 +7,26 @@ const translations = {
         nav_profile: "Profile",
         nav_projects: "Projects",
         nav_domains: "Areas of Expertise",
-        nav_insights: "Areas of Interest",
+        nav_insights: "Beyond Systems",
         nav_contact: "Contact",
 
         hero_title: "Systems Analyst & Custom Application Developer",
 
         hero_text:
-            "I design and build internal business systems that organize data, automate workflows, and turn operational complexity into usable digital tools.",
+            "I design and build business systems that organize data, automate workflows, and turn operational complexity into usable digital tools.",
 
         btn_profile: "Professional Profile",
         btn_projects: "Selected Projects",
 
 
-        hero_flow_subtitle: "System Lifecycle",
-        hero_flow_title: "From Idea to Solution",
-        hero_step1_title: "Analyze",
-        hero_step1_desc: "Business Requirements",
-        hero_step2_title: "Design",
-        hero_step2_desc: "Enterprise Solutions",
-        hero_step3_title: "Deliver",
-        hero_step3_desc: "Reliable Applications",
+        hero_flow_subtitle: "How I Work",
+        hero_flow_title: "From a messy workflow to a useful system",
+        hero_step1_title: "Listen & Map",
+        hero_step1_desc: "Understand the real work",
+        hero_step2_title: "Shape & Build",
+        hero_step2_desc: "Design around people and data",
+        hero_step3_title: "Refine & Support",
+        hero_step3_desc: "Launch, improve, and keep it usable",
 
         domains_title: "Areas of Expertise",
 
@@ -65,7 +65,7 @@ const translations = {
         project_4_desc: "Tailored applications including property management, project tracking, and operational systems.",
 
         // نصوص اهتمامات Insights (تتوافق مع اسم القسم الموحد)
-        insights_title: "Areas of Interest",
+        insights_title: "Beyond Systems",
         insight_1: "Emerging Technologies",
         insight_2: "User Experience",
         insight_3: "Running",
@@ -105,7 +105,7 @@ const translations = {
         tech_hosting: "Container-ready deployment approach designed for reliable cloud delivery.",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالإنجليزية
-        summary_description: "An experienced information systems professional and senior analyst expert in designing and developing software systems, database-driven custom applications, automating workflows, and optimizing digital environments.",
+        summary_description: "Senior information systems professional with 25+ years of experience in a government environment with diverse administrative requirements. My work combines systems analysis, database design, application development, and long-term user support to deliver practical systems that fit real operational needs.",
 
         copyright_text: "© 2026 Eisa Haider. All rights reserved."
     },
@@ -117,13 +117,13 @@ const translations = {
         nav_profile: "الملف المهني",
         nav_projects: "المشاريع",
         nav_domains: "مجالات الخبرة",
-        nav_insights: "مجالات الاهتمام",
+        nav_insights: "خارج إطار العمل",
         nav_contact: "التواصل",
 
         hero_title: "محلل نظم ومطور تطبيقات مخصصة",
 
         hero_text:
-            "أصمم وأطور أنظمة أعمال داخلية تنظّم البيانات، وتؤتمت الإجراءات، وتحول التعقيد التشغيلي إلى أدوات رقمية عملية.",
+            "أصمم وأطور أنظمة أعمال لتنظيم البيانات، وأتمتة الإجراءات، وتحويل التعقيد التشغيلي إلى أدوات رقمية عملية.",
 
         btn_profile: "الملف المهني",
         btn_projects: "المشاريع المختارة",
@@ -141,14 +141,14 @@ const translations = {
 
 
 
-        hero_flow_subtitle: "دورة حياة الأنظمة",
-        hero_flow_title: "من الفكرة إلى الحل المتكامل",
-        hero_step1_title: "التحليل",
-        hero_step1_desc: "متطلبات الأعمال",
-        hero_step2_title: "التصميم",
-        hero_step2_desc: "الحلول البرمجية المؤسسية",
-        hero_step3_title: "التطوير والتسليم",
-        hero_step3_desc: "التطبيقات والأنظمة الموثوقة",
+        hero_flow_subtitle: "طريقة العمل",
+        hero_flow_title: "من إجراءات عمل معقدة إلى أنظمة فعّالة",
+        hero_step1_title: "أفهم وأرسم",
+        hero_step1_desc: "فهم العمل كما يحدث فعلاً",
+        hero_step2_title: "أصمم وأبني",
+        hero_step2_desc: "حلول تناسب الناس والبيانات",
+        hero_step3_title: "أطلق وأحسّن",
+        hero_step3_desc: "تسليم قابل للاستخدام والتطوير",
 
         summary_title: "الملف المهني",
 
@@ -178,7 +178,7 @@ const translations = {
         project_4_desc: "تطبيقات مصممة بدقة حسب الطلب تشمل إدارة العقارات، تتبع المشاريع، والأنظمة التشغيلية المخصصة.",
 
         // نصوص اهتمامات Insights
-        insights_title: "مجالات الاهتمام",
+        insights_title: "خارج إطار العمل",
         insight_1: "التقنيات الناشئة",
         insight_2: "تجربة المستخدم",
         insight_3: "الجري",
@@ -217,7 +217,7 @@ const translations = {
         tech_hosting: "منهجية نشر جاهزة للحاويات ومناسبة للتشغيل السحابي الموثوق.",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالعربية
-        summary_description: "أخصائي نظم معلومات ومحلل أول متمرس في تصميم وتطوير النظم البرمجية، وتطوير التطبيقات المعتمدة على قواعد البيانات، وأتمتة الإجراءات وتحسين بيئات العمل الرقمية.",
+        summary_description: "أخصائي نظم معلومات بخبرة تزيد عن 25 عامًا في بيئة حكومية ذات متطلبات إدارية متعددة. يجمع عملي بين تحليل النظم، تصميم قواعد البيانات، تطوير التطبيقات، ودعم المستخدمين على المدى الطويل لتقديم أنظمة عملية تناسب الاحتياج التشغيلي الحقيقي.",
 
          copyright_text: "© 2026 عيسى حيدر. جميع الحقوق محفوظة."
     }
