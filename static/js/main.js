@@ -5,6 +5,7 @@ const translations = {
         direction: "ltr",
 
         nav_profile: "Profile",
+        nav_odoo: "Odoo Solutions",
         nav_projects: "Projects",
         nav_domains: "Areas of Expertise",
         nav_insights: "Beyond Systems",
@@ -38,6 +39,26 @@ const translations = {
         domain_6: "Digital Skills Training",
 
         summary_title: "Professional Profile",
+
+        odoo_label: "ERP & Business Systems",
+        odoo_title: "Odoo Solutions",
+        odoo_description: "Helping organizations adopt and optimize Odoo for real business needs.",
+        odoo_analyze_title: "Analyze",
+        odoo_analyze_1: "Business Process Analysis",
+        odoo_analyze_2: "Solution Planning",
+        odoo_implement_title: "Implement",
+        odoo_implement_1: "Functional Implementation",
+        odoo_implement_2: "Module Configuration",
+        odoo_implement_3: "Security Setup",
+        odoo_implement_4: "Data Migration",
+        odoo_optimize_title: "Optimize",
+        odoo_optimize_1: "Workflow Automation",
+        odoo_optimize_2: "Dashboards & Reporting",
+        odoo_optimize_3: "Performance Review",
+        odoo_enable_title: "Enable",
+        odoo_enable_1: "User Training",
+        odoo_enable_2: "Documentation",
+        odoo_enable_3: "Knowledge Transfer",
 
         // نصوص الإحصائيات المحدثة والموحدة (Executive Summary)
         stat_years_systems_num: "25+",
@@ -115,6 +136,7 @@ const translations = {
         direction: "rtl",
 
         nav_profile: "الملف المهني",
+        nav_odoo: "حلول Odoo",
         nav_projects: "المشاريع",
         nav_domains: "مجالات الخبرة",
         nav_insights: "خارج إطار العمل",
@@ -151,6 +173,26 @@ const translations = {
         hero_step3_desc: "تسليم قابل للاستخدام والتطوير",
 
         summary_title: "الملف المهني",
+
+        odoo_label: "أنظمة الأعمال وتخطيط الموارد",
+        odoo_title: "حلول Odoo",
+        odoo_description: "مساعدة الجهات على تبني Odoo وتحسينه بما يناسب احتياجات العمل الفعلية.",
+        odoo_analyze_title: "التحليل",
+        odoo_analyze_1: "تحليل إجراءات العمل",
+        odoo_analyze_2: "تخطيط الحل",
+        odoo_implement_title: "التنفيذ",
+        odoo_implement_1: "التنفيذ الوظيفي",
+        odoo_implement_2: "تهيئة الوحدات",
+        odoo_implement_3: "إعداد الصلاحيات",
+        odoo_implement_4: "ترحيل البيانات",
+        odoo_optimize_title: "التحسين",
+        odoo_optimize_1: "أتمتة سير العمل",
+        odoo_optimize_2: "لوحات المعلومات والتقارير",
+        odoo_optimize_3: "مراجعة الأداء",
+        odoo_enable_title: "التمكين",
+        odoo_enable_1: "تدريب المستخدمين",
+        odoo_enable_2: "التوثيق",
+        odoo_enable_3: "نقل المعرفة",
 
         // نصوص الإحصائيات (Executive Summary)
         stat_years_systems_num: "25",
