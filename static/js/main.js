@@ -5,7 +5,7 @@ const translations = {
         direction: "ltr",
 
         nav_profile: "Profile",
-        nav_odoo: "Odoo Solutions",
+        nav_odoo: "Odoo ERP",
         nav_projects: "Projects",
         nav_domains: "Areas of Expertise",
         nav_insights: "Beyond Systems",
@@ -23,11 +23,11 @@ const translations = {
         hero_flow_subtitle: "How I Work",
         hero_flow_title: "From a messy workflow to a useful system",
         hero_step1_title: "Listen & Map",
-        hero_step1_desc: "Understand the real work",
+        hero_step1_desc: "Understand the workflow",
         hero_step2_title: "Shape & Build",
-        hero_step2_desc: "Design around people and data",
+        hero_step2_desc: "Turn needs into usable systems",
         hero_step3_title: "Refine & Support",
-        hero_step3_desc: "Launch, improve, and keep it usable",
+        hero_step3_desc: "Improve with users over time",
 
         domains_title: "Areas of Expertise",
 
@@ -41,20 +41,20 @@ const translations = {
         summary_title: "Professional Profile",
 
         odoo_label: "ERP & Business Systems",
-        odoo_title: "Odoo Solutions",
-        odoo_description: "Helping organizations adopt and optimize Odoo for real business needs.",
+        odoo_title: "Odoo Implementation & Optimization",
+        odoo_description: "Helping organizations configure, adopt, and improve Odoo around real business workflows.",
         odoo_analyze_title: "Analyze",
         odoo_analyze_1: "Business Process Analysis",
         odoo_analyze_2: "Solution Planning",
-        odoo_implement_title: "Implement",
-        odoo_implement_1: "Functional Implementation",
-        odoo_implement_2: "Module Configuration",
-        odoo_implement_3: "Security Setup",
-        odoo_implement_4: "Data Migration",
-        odoo_optimize_title: "Optimize",
-        odoo_optimize_1: "Workflow Automation",
-        odoo_optimize_2: "Dashboards & Reporting",
-        odoo_optimize_3: "Performance Review",
+        odoo_implement_title: "Configure",
+        odoo_implement_1: "Module Configuration",
+        odoo_implement_2: "Security Setup",
+        odoo_implement_3: "Functional Implementation",
+        odoo_implement_4: "User Access Review",
+        odoo_optimize_title: "Migrate & Automate",
+        odoo_optimize_1: "Data Migration",
+        odoo_optimize_2: "Workflow Automation",
+        odoo_optimize_3: "Dashboards & Reporting",
         odoo_enable_title: "Enable",
         odoo_enable_1: "User Training",
         odoo_enable_2: "Documentation",
@@ -94,7 +94,7 @@ const translations = {
 
         // نصوص التواصل
         contact_title: "Contact",
-        contact_subtitle: "Available for custom business applications, workflow automation, and information systems consulting.",
+        contact_subtitle: "Open to conversations around custom business applications, ERP solutions, workflow automation, information systems consulting, and training advisory.",
         contact_email: "E-mail",
         contact_email_url: "mailto:eisa.haider@outlook.com",
         contact_whatsapp: "WhatsApp",
@@ -107,26 +107,10 @@ const translations = {
         language_button: "EN | AR",
         theme_button: "Theme",
 
-        // نصوص قسم معمارية المنصة الموحدة
-     /*    platform_title: "Built with",
-        tech_backend: "Backend Development",
-        tech_frontend: "Responsive UI",
-        tech_interactivity: "Client-Side Interactivity",
-        tech_version: "Version Control",
-        tech_hosting: "Cloud Deployment", */
-
-
-        platform_label: "Built as a real product",
-        platform_title: "Built as a working Flask portfolio",
-        platform_desc: "A lightweight, responsive portfolio with structured content, interactive behavior, and cloud-ready deployment.",
-
-        tech_backend: "Application routing, templates, content structure, and server-side organization.",
-        tech_frontend: "Responsive interface, consistent spacing, reusable utility-first styling.",
-        tech_interactivity: "Language switching, motion states, navigation behavior, and UI feedback.",
-        tech_hosting: "Container-ready deployment approach designed for reliable cloud delivery.",
+        platform_title: "Built with",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالإنجليزية
-        summary_description: "Senior information systems professional with 25+ years of experience in a government environment with diverse administrative requirements. My work combines systems analysis, database design, application development, and long-term user support to deliver practical systems that fit real operational needs.",
+        summary_description: "Senior information systems professional with 25+ years of experience in a government environment with diverse administrative requirements. My work combines systems analysis, database design, application development, workflow improvement, and long-term user support to deliver practical systems that fit real operational needs. I now build on that foundation through modern web applications, cloud deployment, and ERP solutions for small and medium-sized businesses.",
 
         copyright_text: "© 2026 Eisa Haider. All rights reserved."
     },
@@ -136,7 +120,7 @@ const translations = {
         direction: "rtl",
 
         nav_profile: "الملف المهني",
-        nav_odoo: "حلول Odoo",
+        nav_odoo: "Odoo ERP",
         nav_projects: "المشاريع",
         nav_domains: "مجالات الخبرة",
         nav_insights: "خارج إطار العمل",
@@ -166,29 +150,29 @@ const translations = {
         hero_flow_subtitle: "طريقة العمل",
         hero_flow_title: "من إجراءات عمل معقدة إلى أنظمة فعّالة",
         hero_step1_title: "أفهم وأرسم",
-        hero_step1_desc: "فهم العمل كما يحدث فعلاً",
+        hero_step1_desc: "فهم سير العمل",
         hero_step2_title: "أصمم وأبني",
-        hero_step2_desc: "حلول تناسب الناس والبيانات",
-        hero_step3_title: "أطلق وأحسّن",
-        hero_step3_desc: "تسليم قابل للاستخدام والتطوير",
+        hero_step2_desc: "تحويل الاحتياج إلى نظام قابل للاستخدام",
+        hero_step3_title: "أحسّن وأدعم",
+        hero_step3_desc: "تطوير النظام مع المستخدمين بمرور الوقت",
 
         summary_title: "الملف المهني",
 
         odoo_label: "أنظمة الأعمال وتخطيط الموارد",
-        odoo_title: "حلول Odoo",
-        odoo_description: "مساعدة الجهات على تبني Odoo وتحسينه بما يناسب احتياجات العمل الفعلية.",
+        odoo_title: "تطبيق وتحسين Odoo",
+        odoo_description: "مساعدة الأعمال التجارية على تهيئة Odoo وتبنّيه وتحسينه بما يتناسب مع إجراءات العمل الفعلية.",
         odoo_analyze_title: "التحليل",
         odoo_analyze_1: "تحليل إجراءات العمل",
         odoo_analyze_2: "تخطيط الحل",
-        odoo_implement_title: "التنفيذ",
-        odoo_implement_1: "التنفيذ الوظيفي",
-        odoo_implement_2: "تهيئة الوحدات",
-        odoo_implement_3: "إعداد الصلاحيات",
-        odoo_implement_4: "ترحيل البيانات",
-        odoo_optimize_title: "التحسين",
-        odoo_optimize_1: "أتمتة سير العمل",
-        odoo_optimize_2: "لوحات المعلومات والتقارير",
-        odoo_optimize_3: "مراجعة الأداء",
+        odoo_implement_title: "التهيئة",
+        odoo_implement_1: "تهيئة الوحدات",
+        odoo_implement_2: "إعداد الصلاحيات",
+        odoo_implement_3: "التنفيذ الوظيفي",
+        odoo_implement_4: "مراجعة صلاحيات المستخدمين",
+        odoo_optimize_title: "الترحيل والأتمتة",
+        odoo_optimize_1: "ترحيل البيانات",
+        odoo_optimize_2: "أتمتة سير العمل",
+        odoo_optimize_3: "لوحات المعلومات والتقارير",
         odoo_enable_title: "التمكين",
         odoo_enable_1: "تدريب المستخدمين",
         odoo_enable_2: "التوثيق",
@@ -228,7 +212,7 @@ const translations = {
 
         // نصوص التواصل
         contact_title: "التواصل",
-        contact_subtitle: "متاح لتطوير تطبيقات أعمال مخصصة، وأتمتة إجراءات العمل، واستشارات نظم المعلومات.",
+        contact_subtitle: "يسعدني الحديث حول تطوير تطبيقات الأعمال المخصصة، وحلول ERP، وأتمتة إجراءات العمل، واستشارات نظم المعلومات، والاستشارات التدريبية.",
         contact_email: "البريد الإلكتروني",
         contact_email_url: "mailto:eisa.haider@outlook.com",
         contact_whatsapp: "WhatsApp",
@@ -241,25 +225,10 @@ const translations = {
         language_button: "EN | AR",
         theme_button: "المظهر",
 
-/*         platform_title: "بُنيت بواسطة",
-        tech_backend: "تطوير الواجهة الخلفية",
-        tech_frontend: "واجهة مستخدم متجاوبة",
-        tech_interactivity: "التفاعلية البرمجية للمستخدم",
-        tech_version: "إدارة الإصدارات ",
-        tech_hosting: "النشر السحابي",
- */
-
-        platform_label: "بُني كمشروع فعلي",
-        platform_title: "ملف مهني مبني كتطبيق Flask فعلي",
-        platform_desc: "واجهة خفيفة ومتجاوبة بمحتوى منظم، وتفاعل برمجي، وتجهيز مناسب للنشر السحابي.",
-
-        tech_backend: "تنظيم المسارات والقوالب وبنية المحتوى من جهة الخادم.",
-        tech_frontend: "واجهة متجاوبة ومسافات دقيقة وتصميم مبني بأسلوب utility-first.",
-        tech_interactivity: "تبديل اللغة والمظهر وحالات الحركة وسلوكيات الواجهة.",
-        tech_hosting: "منهجية نشر جاهزة للحاويات ومناسبة للتشغيل السحابي الموثوق.",
+        platform_title: "بُني باستخدام",
 
         // الفقرة الوصفية المعتمدة للملف المهني بالعربية
-        summary_description: "أخصائي نظم معلومات بخبرة تزيد عن 25 عامًا في بيئة حكومية ذات متطلبات إدارية متعددة. يجمع عملي بين تحليل النظم، تصميم قواعد البيانات، تطوير التطبيقات، ودعم المستخدمين على المدى الطويل لتقديم أنظمة عملية تناسب الاحتياج التشغيلي الحقيقي.",
+        summary_description: "أخصائي نظم معلومات بخبرة تزيد عن 25 عامًا في بيئة حكومية ذات متطلبات إدارية متعددة. يجمع عملي بين تحليل النظم، تصميم قواعد البيانات، تطوير التطبيقات، تحسين إجراءات العمل، ودعم المستخدمين على المدى الطويل لتقديم أنظمة عملية تناسب الاحتياج التشغيلي الحقيقي. وأستند اليوم إلى هذه الخبرة في تطوير تطبيقات ويب حديثة، وتشغيلها عبر الخدمات السحابية، وتقديم حلول ERP للأعمال الصغيرة والمتوسطة.",
 
          copyright_text: "© 2026 عيسى حيدر. جميع الحقوق محفوظة."
     }
