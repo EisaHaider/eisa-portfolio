@@ -71,19 +71,45 @@ const translations = {
         stat_enterprise_text: "Years in Technical Training",
 
         projects_title: "Selected Projects & Initiatives",
-        
-        // نصوص المشاريع المحدثة
-        project_1_title: "Document Management System",
-        project_1_desc: "Enterprise-scale document and records management platform.",
-        
-        project_2_title: "Electronic Medical Records System",
-        project_2_desc: "Healthcare information system for managing patient records.",
-        
-        project_3_title: "Workflow Automation Initiatives",
-        project_3_desc: "Process automation solutions for administrative and operational workflows.",
-        
-        project_4_title: "Custom Business Applications",
-        project_4_desc: "Tailored applications including property management, project tracking, and operational systems.",
+        project_challenge_label: "Challenge",
+        project_solution_label: "Analysis & Solution",
+        project_role_label: "My Role",
+        project_outcome_label: "Outcome",
+        project_technology_label: "Technology",
+        project_details_label: "Read case study",
+
+        project_1_type: "Enterprise Records Platform",
+        project_1_title: "Document Management System (DMS)",
+        project_1_desc: "An in-house document management platform designed to digitize paper archives, structure document classification, and support secure retrieval across the organization.",
+        project_1_challenge: "The organization relied heavily on paper-based records while commercial document management products were costly and did not adequately fit internal classification requirements, security policies, and operational workflows.",
+        project_1_solution: "Requirements were analyzed across multiple departments, including document lifecycles, classification schemes, retention rules, and retrieval processes. The resulting platform was designed around secure storage, metadata-driven indexing, access controls, and scalable electronic archiving workflows.",
+        project_1_role: "Proposed the initiative, developed the initial proof of concept, helped secure approval, and worked with a small development team through analysis, design, implementation, deployment, user training, and operational rollout.",
+        project_1_outcome: "Deployed successfully and operating since 2013. The system enabled large-scale archive digitization, improved indexing and search, strengthened records management practices, and removed the need to procure an external platform.",
+
+        project_2_type: "Healthcare Information System",
+        project_2_title: "Electronic Medical Records (EMR)",
+        project_2_desc: "A bilingual electronic medical records platform connecting clinical and administrative workflows across hospital departments within a unified patient record.",
+        project_2_challenge: "Medical records were paper-based and supported by isolated Microsoft Access databases. This created fragmented clinical information, medication duplication, inefficient coordination, and increased risk of medical errors.",
+        project_2_solution: "Led requirements analysis with physicians, nurses, pharmacists, laboratory staff, radiology, medical records, and hospital administration. The solution integrated registration, emergency care, clinics, pharmacy, laboratory, radiology, nursing, documentation, prescriptions, appointments, attachments, dashboards, and role-based security.",
+        project_2_role: "Led systems analysis, designed the database architecture, managed a four-developer team, and participated across solution architecture, implementation, deployment, user training, production support, enhancements, documentation, and technical coordination.",
+        project_2_outcome: "The system replaced paper-based medical records with a unified electronic platform supporting daily clinical operations around the clock. It improved continuity of care, accelerated clinical requests, reduced paperwork, and created a scalable foundation for healthcare transformation.",
+
+        project_3_type: "Project Operations Platform",
+        project_3_title: "Project Tracking System",
+        project_3_desc: "A purpose-built project tracking platform for contract-driven workflows, financial milestones, progress visibility, and customized management reporting.",
+        project_3_challenge: "Commercial project management tools were either too complex or too limited for the organization's operational requirements, Arabic terminology, contract workflows, financial milestones, and customized reporting needs.",
+        project_3_solution: "Worked with the Project Management Department to design a platform covering contract registration, execution, progress monitoring, payment tracking, final closure, document management, task assignments, dashboards, notifications, calendars, Gantt charts, and financial documentation.",
+        project_3_role: "Served as lead systems analyst, database designer, lead developer, and development team lead. Guided a two-developer team while incorporating continuous user feedback from the Project Management Department.",
+        project_3_outcome: "Deployed in 2023 and remains in active use. It replaced spreadsheet-based tracking with centralized visibility into project progress, contractual milestones, financial payments, dashboards, and operational reports.",
+
+        project_4_type: "Cloud Web Application",
+        project_4_title: "Student Services Portal",
+        project_4_desc: "A cloud-native student services portal that allows students and parents to retrieve examination seating information online while giving staff simple tools for data updates.",
+        project_4_challenge: "An educational institution needed online student services, including secure examination seating lookup by Civil ID and a simple administrative interface for non-technical staff to import Excel records each academic term.",
+        project_4_solution: "Designed and developed a responsive web application with secure student search, profile retrieval, role-based administration, Excel imports, bulk record management, audit logging, filtering, and administrative dashboards, with a modular architecture for future services.",
+        project_4_role: "Designed, developed, tested, deployed, and maintained the full solution independently, covering requirements analysis, database design, Python and Flask backend development, frontend implementation, Google Cloud Run deployment, GitHub source control, and ongoing enhancements.",
+        project_4_outcome: "The application is publicly deployed and actively used. It simplified administrative updates through Excel imports, supports seasonal traffic during examination periods, and has a separate open-source edition on GitHub.",
+        project_4_technology: "Python, Flask, SQLite, Bootstrap, JavaScript, HTML/CSS, Google Cloud Run, GitHub.",
 
         // نصوص اهتمامات Insights (تتوافق مع اسم القسم الموحد)
         insights_title: "Beyond Systems",
@@ -199,19 +225,45 @@ const translations = {
         stat_enterprise_text: "سنوات في المجال التدريبي",
 
         projects_title: "المشاريع والمبادرات",
+        project_challenge_label: "التحدي",
+        project_solution_label: "التحليل والحل",
+        project_role_label: "دوري",
+        project_outcome_label: "الأثر",
+        project_technology_label: "التقنيات",
+        project_details_label: "قراءة دراسة الحالة",
 
-        // نصوص المشاريع المحدثة
+        project_1_type: "منصة سجلات مؤسسية",
         project_1_title: "نظام إدارة الوثائق DMS",
-        project_1_desc: "منصة متكاملة على مستوى المؤسسات لإدارة الوثائق والأرشفة والسجلات الإلكترونية.",
+        project_1_desc: "منصة داخلية لإدارة الوثائق صُممت لتحويل الأرشيف الورقي إلى أرشيف رقمي منظم، مع تصنيف واضح للوثائق واسترجاع آمن داخل المؤسسة.",
+        project_1_challenge: "كانت المؤسسة تعتمد بدرجة كبيرة على السجلات الورقية، وفي الوقت نفسه كانت الحلول التجارية لإدارة الوثائق مكلفة ولا تلبي بشكل كافٍ متطلبات التصنيف الداخلي، وسياسات الأمان، وإجراءات العمل التشغيلية.",
+        project_1_solution: "تم تحليل المتطلبات مع أصحاب العلاقة في عدة إدارات، ومراجعة دورة حياة الوثائق، وآليات التصنيف، ومتطلبات الحفظ، وطرق الاسترجاع. وبناءً على ذلك تم تصميم حل داخلي يعتمد على التخزين الآمن، والفهرسة بالبيانات الوصفية، وصلاحيات الوصول، وأرشفة إلكترونية قابلة للتوسع.",
+        project_1_role: "اقترحت المبادرة، وطورت النموذج الأولي، وشاركت في الحصول على الموافقة لتنفيذ المشروع، ثم عملت مع فريق تطوير صغير في التحليل، التصميم، التنفيذ، النشر، تدريب المستخدمين، والتشغيل الفعلي للنظام.",
+        project_1_outcome: "تم نشر النظام بنجاح وهو يعمل منذ عام 2013. ساعد على رقمنة أرشيف ورقي كبير، وتحسين الفهرسة والبحث، وتعزيز ممارسات إدارة السجلات، والاستغناء عن شراء منصة خارجية لإدارة الوثائق.",
 
+        project_2_type: "نظام معلومات صحي",
         project_2_title: "نظام السجلات الطبية الإلكترونية EMR",
-        project_2_desc: "نظام معلومات صحي متقدم لإدارة السجلات الطبية وبيانات المرضى بكفاءة وأمان.",
+        project_2_desc: "منصة ثنائية اللغة للسجلات الطبية الإلكترونية تربط الإجراءات السريرية والإدارية بين الأقسام ضمن سجل موحد للمريض.",
+        project_2_challenge: "كانت السجلات الطبية تعتمد على الورق وقواعد بيانات Microsoft Access منفصلة بين الأقسام، مما أدى إلى تشتت المعلومات الطبية، وتكرار الأدوية، وضعف التنسيق، وزيادة مخاطر الأخطاء الطبية.",
+        project_2_solution: "قدت تحليل المتطلبات مع فريق متعدد التخصصات شمل الأطباء، التمريض، الصيدلة، المختبر، الأشعة، السجلات الطبية، والإدارة. وتم تصميم نظام يدمج التسجيل، الطوارئ، العيادات، الصيدلية، المختبر، الأشعة، التمريض، التوثيق الطبي، الوصفات، المواعيد، المرفقات، لوحات المعلومات، والصلاحيات حسب الأدوار.",
+        project_2_role: "قدت تحليل النظم، وصممت بنية قاعدة البيانات، وأدرت فريقًا من أربعة مطورين، وشاركت في المعمارية، التنفيذ، النشر، تدريب المستخدمين، دعم التشغيل، التحسينات المستمرة، إعداد الوثائق، والتنسيق مع الفرق الفنية.",
+        project_2_outcome: "استبدل النظام السجلات الورقية بمنصة إلكترونية موحدة تدعم العمليات السريرية اليومية على مدار الساعة. حسّن استمرارية الرعاية، وسرّع طلبات المختبر والأشعة، وقلل الأعمال الورقية، ووفر أساسًا رقميًا قابلًا للتوسع للتحول الصحي.",
 
-        project_3_title: "حلول أتمتة إجراءات العمل",
-        project_3_desc: "حلول برمجية ذكية لأتمتة سير العمليات الإدارية والتشغيلية وتقليص الهدر الزمني.",
+        project_3_type: "منصة متابعة مشاريع",
+        project_3_title: "نظام تتبع المشاريع",
+        project_3_desc: "منصة مخصصة لمتابعة المشاريع والعقود، ومراقبة التقدم، والمعالم المالية، وإعداد التقارير ولوحات المعلومات الإدارية.",
+        project_3_challenge: "لم تكن حلول إدارة المشاريع التجارية مناسبة بالكامل لاحتياجات المؤسسة؛ فبعضها كان معقدًا أكثر من اللازم، وبعضها لا يدعم متطلبات العقود، والمعالم المالية، والمصطلحات العربية، والتقارير المخصصة.",
+        project_3_solution: "تم العمل مع إدارة المشاريع لتصميم منصة تغطي تسجيل العقود، التنفيذ، متابعة التقدم، الدفعات المالية، إغلاق المشاريع، إدارة الوثائق، توزيع المهام، التقارير، لوحات المعلومات، التنبيهات، التقويمات التفاعلية، ومخططات Gantt.",
+        project_3_role: "عملت كمحلل نظم رئيسي، ومصمم قاعدة البيانات، والمطور الرئيسي، وقائد فريق التطوير. قدت فريقًا من مطورين اثنين مع متابعة مستمرة لملاحظات المستخدمين من إدارة المشاريع.",
+        project_3_outcome: "تم نشر النظام في عام 2023 وما زال قيد الاستخدام. استبدل المتابعة المعتمدة على الجداول بمنصة مركزية توفر رؤية مباشرة لتقدم المشاريع، والمعالم التعاقدية، والدفعات المالية، ولوحات المعلومات، والتقارير التشغيلية.",
 
-        project_4_title: "تطبيقات أعمال مخصصة",
-        project_4_desc: "تطبيقات مصممة بدقة حسب الطلب تشمل إدارة العقارات، تتبع المشاريع، والأنظمة التشغيلية المخصصة.",
+        project_4_type: "تطبيق ويب سحابي",
+        project_4_title: "بوابة الخدمات الطلابية",
+        project_4_desc: "بوابة خدمات طلابية سحابية تتيح للطلاب وأولياء الأمور الوصول إلى بيانات الجلوس للاختبارات عبر الإنترنت، مع أدوات مبسطة لتحديث البيانات من قبل الموظفين.",
+        project_4_challenge: "احتاجت مؤسسة تعليمية إلى تقديم خدمات طلابية عبر الإنترنت، وأبرزها تمكين الطلاب من معرفة بيانات الجلوس للاختبارات باستخدام الرقم المدني، مع واجهة إدارية سهلة تتيح للموظفين غير التقنيين تحديث بيانات الطلاب عبر ملفات Excel كل فصل دراسي.",
+        project_4_solution: "صممت وطورت تطبيق ويب متجاوبًا يوفر بحثًا آمنًا للطلاب، واسترجاع بياناتهم، وإدارة حسب الأدوار، واستيراد Excel، وإدارة سجلات جماعية، وسجل تدقيق، وبحثًا وتصفية، ولوحات إدارية، مع بنية قابلة للتوسع لإضافة خدمات مستقبلية.",
+        project_4_role: "صممت وطورت واختبرت ونشرت وصنت الحل بالكامل بشكل مستقل، بما في ذلك تحليل المتطلبات، تصميم قاعدة البيانات، تطوير الخلفية باستخدام Python وFlask، تنفيذ الواجهة، النشر على Google Cloud Run، إدارة الكود عبر GitHub، والتحسينات اللاحقة.",
+        project_4_outcome: "التطبيق منشور ويُستخدم فعليًا لتقديم الخدمات الطلابية عبر الإنترنت. ساعد على تبسيط تحديث البيانات من خلال استيراد Excel، ودعم فترات الضغط الموسمية أثناء الاختبارات، كما تم نشر نسخة مفتوحة المصدر منه على GitHub.",
+        project_4_technology: "Python, Flask, SQLite, Bootstrap, JavaScript, HTML/CSS, Google Cloud Run, GitHub.",
 
         // نصوص اهتمامات Insights
         insights_title: "خارج إطار العمل",

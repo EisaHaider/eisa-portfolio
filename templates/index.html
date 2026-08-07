@@ -15,8 +15,12 @@ Eisa Haider | Information Systems Architect
 
             <div class="flex items-center justify-between h-20">
 
-                <a href="#" class="text-xl font-bold hover:opacity-80 transition-opacity">
-                    Eisa Haider
+                <a href="#" class="inline-flex items-center gap-3 text-xl font-bold hover:opacity-80 transition-opacity">
+                    <img src="{{ url_for('static', filename='images/eh-icon.png') }}"
+                         alt="Eisa Haider"
+                         class="h-9 w-9 rounded-full border object-cover"
+                         style="border-color:rgba(59,130,246,.45);">
+                    <span>Eisa Haider</span>
                 </a>
 
                 <div class="hidden lg:flex items-center gap-6">
@@ -329,42 +333,182 @@ Eisa Haider | Information Systems Architect
 
     <section id="projects" class="container-custom px-6 section-spacing">
 
+        <h2 class="section-title mb-10" data-i18n="projects_title"></h2>
 
-            <h2 class="section-title mb-10" data-i18n="projects_title"></h2>
+        <div class="grid lg:grid-cols-2 gap-6 items-start">
 
-            <div class="grid md:grid-cols-2 gap-6">
+            <article class="card p-6 md:p-7 flex flex-col gap-6">
+                <div>
+                    <span class="inline-flex rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] opacity-55"
+                          style="border-color:var(--border-color);"
+                          data-i18n="project_1_type"></span>
 
-                <div class="card p-8 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="project_1_title"></h3>
-                        <p class="text-base opacity-70 leading-relaxed mb-4" data-i18n="project_1_desc"></p>
-                    </div>
+                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_1_title"></h3>
+                    <p class="text-base opacity-70 leading-relaxed" data-i18n="project_1_desc"></p>
                 </div>
 
-                <div class="card p-8 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="project_2_title"></h3>
-                        <p class="text-base opacity-70 leading-relaxed mb-4" data-i18n="project_2_desc"></p>
+                <details class="group rounded-xl border bg-white/[0.02] p-4"
+                         style="border-color:var(--border-color);">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold">
+                        <span data-i18n="project_details_label"></span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+                    </summary>
+
+                    <div class="mt-5 grid gap-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_challenge_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_1_challenge"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_solution_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_1_solution"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_role_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_1_role"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_1_outcome"></p>
+                        </div>
                     </div>
+                </details>
+            </article>
+
+            <article class="card p-6 md:p-7 flex flex-col gap-6">
+                <div>
+                    <span class="inline-flex rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] opacity-55"
+                          style="border-color:var(--border-color);"
+                          data-i18n="project_2_type"></span>
+
+                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_2_title"></h3>
+                    <p class="text-base opacity-70 leading-relaxed" data-i18n="project_2_desc"></p>
                 </div>
 
-                <div class="card p-8 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="project_3_title"></h3>
-                        <p class="text-base opacity-70 leading-relaxed mb-4" data-i18n="project_3_desc"></p>
+                <details class="group rounded-xl border bg-white/[0.02] p-4"
+                         style="border-color:var(--border-color);">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold">
+                        <span data-i18n="project_details_label"></span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+                    </summary>
+
+                    <div class="mt-5 grid gap-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_challenge_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_2_challenge"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_solution_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_2_solution"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_role_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_2_role"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_2_outcome"></p>
+                        </div>
                     </div>
+                </details>
+            </article>
+
+            <article class="card p-6 md:p-7 flex flex-col gap-6">
+                <div>
+                    <span class="inline-flex rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] opacity-55"
+                          style="border-color:var(--border-color);"
+                          data-i18n="project_3_type"></span>
+
+                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_3_title"></h3>
+                    <p class="text-base opacity-70 leading-relaxed" data-i18n="project_3_desc"></p>
                 </div>
 
-                <div class="card p-8 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-3" data-i18n="project_4_title"></h3>
-                        <p class="text-base opacity-70 leading-relaxed mb-4" data-i18n="project_4_desc"></p>
+                <details class="group rounded-xl border bg-white/[0.02] p-4"
+                         style="border-color:var(--border-color);">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold">
+                        <span data-i18n="project_details_label"></span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+                    </summary>
+
+                    <div class="mt-5 grid gap-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_challenge_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_3_challenge"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_solution_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_3_solution"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_role_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_3_role"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_3_outcome"></p>
+                        </div>
                     </div>
+                </details>
+            </article>
+
+            <article class="card p-6 md:p-7 flex flex-col gap-6">
+                <div>
+                    <span class="inline-flex rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] opacity-55"
+                          style="border-color:var(--border-color);"
+                          data-i18n="project_4_type"></span>
+
+                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_4_title"></h3>
+                    <p class="text-base opacity-70 leading-relaxed" data-i18n="project_4_desc"></p>
                 </div>
 
-            </div>
+                <details class="group rounded-xl border bg-white/[0.02] p-4"
+                         style="border-color:var(--border-color);">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold">
+                        <span data-i18n="project_details_label"></span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+                    </summary>
 
-        </section>
+                    <div class="mt-5 grid gap-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_challenge_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_4_challenge"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_solution_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_4_solution"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_role_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_4_role"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_4_outcome"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_technology_label"></h4>
+                            <p class="text-sm leading-relaxed opacity-70" data-i18n="project_4_technology"></p>
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+        </div>
+
+    </section>
 
     <section id="domains" class="container-custom px-6 section-spacing">
 
@@ -554,22 +698,24 @@ Eisa Haider | Information Systems Architect
 </section>
 
 <footer class="py-8 text-center text-xs opacity-60">
-    <div class="inline-flex items-center justify-center gap-2 text-slate-400 font-sans">
-        
+    <div class="mb-4 inline-flex items-center justify-center gap-2.5 text-slate-400 font-sans">
+        <img src="{{ url_for('static', filename='images/eh-icon.png') }}"
+             alt="Eisa Haider"
+             class="h-8 w-8 rounded-full border object-cover opacity-85"
+             style="border-color:rgba(59,130,246,.35);">
+
         <!-- العبارة المبتكرة والعداد (إنجليزي دائماً بأرقام جافاسكريبت) -->
         <span class="text-slate-300 font-medium" dir="ltr">
             Digital Handshakes: <span id="views-count" class="font-mono text-blue-400">...</span>
         </span>
+    </div>
 
-        <!-- فاصل نقطي أنيق -->
-        <span class="text-slate-600 opacity-70">|</span>
-
+    <div class="text-slate-400 font-sans">
         <!-- نص الحقوق المربوط بنظام الترجمة لديك -->
-        <span data-i18n="copyright_text" class="text-slate-400">
+        <span data-i18n="copyright_text">
             <!-- سيتم استبدال هذا النص تلقائياً عبر ملفات i18n -->
             © 2026 عيسى حيدر. جميع الحقوق محفوظة.
         </span>
-
     </div>
 </footer>
 
