@@ -34,7 +34,7 @@ const translations = {
         domain_1: "Enterprise Information Systems Analysis",
         domain_2: "Custom Application Development",
         domain_3: "Workflow Automation",
-        domain_4: "Enterprise Information Management",
+        domain_4: "ERP & Business Systems",
         domain_5: "Cloud-Native Solutions",
         domain_6: "Digital Skills Training",
 
@@ -149,7 +149,7 @@ const translations = {
         domain_1: "تحليل نظم المعلومات المؤسسية",
         domain_2: "تطوير التطبيقات المخصصة",
         domain_3: "أتمتة الإجراءات والعمليات",
-        domain_4: "إدارة المعلومات المؤسسية",
+        domain_4: " أنظمة تخطيط الموارد",
         domain_5: "الحلول السحابية",
         domain_6: "تنمية المهارات الرقمية",
 

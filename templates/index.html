@@ -553,9 +553,42 @@ Eisa Haider | Information Systems Architect
 
 </section>
 
-    <footer class="py-8 text-center text-sm opacity-50" data-i18n="copyright_text">
-    
+<footer class="py-8 text-center text-xs opacity-60">
+    <div class="inline-flex items-center justify-center gap-2 text-slate-400 font-sans">
+        
+        <!-- العبارة المبتكرة والعداد (إنجليزي دائماً بأرقام جافاسكريبت) -->
+        <span class="text-slate-300 font-medium" dir="ltr">
+            Digital Handshakes: <span id="views-count" class="font-mono text-blue-400">...</span>
+        </span>
+
+        <!-- فاصل نقطي أنيق -->
+        <span class="text-slate-600 opacity-70">|</span>
+
+        <!-- نص الحقوق المربوط بنظام الترجمة لديك -->
+        <span data-i18n="copyright_text" class="text-slate-400">
+            <!-- سيتم استبدال هذا النص تلقائياً عبر ملفات i18n -->
+            © 2026 عيسى حيدر. جميع الحقوق محفوظة.
+        </span>
+
+    </div>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://countapi.mileshilliard.com/api/v1/hit/eisa_haider_online")
+            .then(res => res.json())
+            .then(data => {
+                const countElem = document.getElementById("views-count");
+                if (countElem && data.value) {
+                    countElem.textContent = data.value;
+                }
+            })
+            .catch(() => {
+                const countElem = document.getElementById("views-count");
+                if (countElem) countElem.textContent = "—";
+            });
+    });
+</script>
 
 </div>
 
