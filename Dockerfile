@@ -11,5 +11,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # نسخ بقية ملفات مشروع الفلاسك بالكامل
 COPY . /workspace/
 
-# تشغيل التطبيق باستخدام Gunicorn (متوافق مع app = Flask(__name__) في ملف app.py)
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
+# تشغيل التطبيق باستخدام Gunicorn والربط مع 0.0.0.0 لضمان وصول الاتصالات من Cloud Run
+CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 app:app

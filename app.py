@@ -86,6 +86,6 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # هذا الجزء سيُنفذ فقط عند التشغيل المحلي المباشر عبر (python app.py)
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
