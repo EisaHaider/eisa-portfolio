@@ -93,16 +93,26 @@ const translations = {
         insight_4: "Health & Nutrition",
 
         // نصوص التواصل
-        contact_title: "Contact",
+        contact_title: "Let's Keep In Touch",
         contact_subtitle: "Open to conversations around custom business applications, ERP solutions, workflow automation, information systems consulting, and training advisory.",
-        contact_email: "E-mail",
-        contact_email_url: "mailto:eisa.haider@outlook.com",
+        contact_name_label: "Name",
+        contact_name_placeholder: "Your name",
+        contact_email_label: "Email",
+        contact_email_placeholder: "your@email.com",
+        contact_phone_label: "Phone",
+        contact_phone_placeholder: "Optional",
+        contact_message_label: "Message",
+        contact_message_placeholder: "Share a few details about what you would like to discuss.",
+        contact_submit: "Send Message",
+        contact_sending: "Sending...",
+        contact_success: "Thank you. Your message has been sent.",
+        contact_error: "Sorry, the message could not be sent. Please try WhatsApp or email directly.",
+        contact_quick_title: "Prefer a quick conversation?",
+        contact_quick_text: "Reach me directly on WhatsApp.",
+        contact_quick_button: "Message on WhatsApp",
+        contact_email_subject: "Portfolio Inquiry",
         contact_whatsapp: "WhatsApp",
         contact_whatsapp_url: "https://wa.me/96566686499",
-        contact_linkedin: "LinkedIn",
-        contact_linkedin_url: "https://linkedin.com/in/eisa-haider",
-        contact_github: "GitHub",
-        contact_github_url: "https://github.com/EisaHaider",
    
         language_button: "EN | AR",
         theme_button: "Theme",
@@ -211,16 +221,26 @@ const translations = {
         insight_4: "الصحة والتغذية",
 
         // نصوص التواصل
-        contact_title: "التواصل",
+        contact_title: "لنبقَ على تواصل",
         contact_subtitle: "يسعدني الحديث حول تطوير تطبيقات الأعمال المخصصة، وحلول ERP، وأتمتة إجراءات العمل، واستشارات نظم المعلومات، والاستشارات التدريبية.",
-        contact_email: "البريد الإلكتروني",
-        contact_email_url: "mailto:eisa.haider@outlook.com",
+        contact_name_label: "الاسم",
+        contact_name_placeholder: "اسمك",
+        contact_email_label: "البريد الإلكتروني",
+        contact_email_placeholder: "your@email.com",
+        contact_phone_label: "رقم الهاتف",
+        contact_phone_placeholder: "اختياري",
+        contact_message_label: "الرسالة",
+        contact_message_placeholder: "شارك ما تود مناقشته في رسالتك.",
+        contact_submit: "إرسال الرسالة",
+        contact_sending: "جارٍ الإرسال...",
+        contact_success: "شكرًا لك. تم إرسال رسالتك بنجاح.",
+        contact_error: "تعذر إرسال الرسالة. يمكنك استخدام واتساب أو البريد مباشرة.",
+        contact_quick_title: "تفضل تواصلًا أسرع؟",
+        contact_quick_text: "يمكنك التواصل معي مباشرة عبر واتساب.",
+        contact_quick_button: "التواصل عبر واتساب",
+        contact_email_subject: "استفسار من الموقع الشخصي",
         contact_whatsapp: "WhatsApp",
         contact_whatsapp_url: "https://wa.me/96566686499",
-        contact_linkedin: "LinkedIn",
-        contact_linkedin_url: "https://linkedin.com/in/eisa-haider",
-        contact_github: "GitHub",
-        contact_github_url: "https://github.com/EisaHaider",
 
         language_button: "EN | AR",
         theme_button: "المظهر",
@@ -248,6 +268,13 @@ function updateTexts(lang) {
         const urlKey = `${key}_url`;
         if (translations[lang][urlKey]) {
             el.href = translations[lang][urlKey];
+        }
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (translations[lang][key]) {
+            el.placeholder = translations[lang][key];
         }
     });
 
@@ -302,6 +329,72 @@ function revealElements() {
     });
 }
 
+function setupContactForm() {
+    const form = document.getElementById("contact-form");
+    if (!form) {
+        return;
+    }
+
+    const submitButton = document.getElementById("contact-submit");
+    const submitText = submitButton ? submitButton.querySelector("[data-i18n]") : null;
+    const status = document.getElementById("contact-status");
+
+    form.addEventListener("submit", async event => {
+        event.preventDefault();
+
+        const lang = localStorage.getItem("language") || "en";
+        const data = new FormData(form);
+        const payload = {
+            name: data.get("name") || "",
+            email: data.get("email") || "",
+            phone: data.get("phone") || "",
+            message: data.get("message") || ""
+        };
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.classList.add("opacity-70", "cursor-not-allowed");
+        }
+        if (submitText) {
+            submitText.textContent = translations[lang].contact_sending;
+        }
+        if (status) {
+            status.textContent = "";
+        }
+
+        try {
+            const response = await fetch("/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                throw new Error("Contact request failed");
+            }
+
+            form.reset();
+            if (status) {
+                status.textContent = translations[lang].contact_success;
+                status.className = "min-h-5 text-sm text-blue-400";
+            }
+        } catch (error) {
+            if (status) {
+                status.textContent = translations[lang].contact_error;
+                status.className = "min-h-5 text-sm text-red-400";
+            }
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.classList.remove("opacity-70", "cursor-not-allowed");
+            }
+            if (submitText) {
+                submitText.textContent = translations[lang].contact_submit;
+            }
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("language") || "en";
     const savedTheme = localStorage.getItem("theme") || "dark";
@@ -323,5 +416,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lucide.createIcons();
     }
 
+    setupContactForm();
     revealElements();
 });

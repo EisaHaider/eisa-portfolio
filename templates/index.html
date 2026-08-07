@@ -410,57 +410,101 @@ Eisa Haider | Information Systems Architect
     
     <section id="contact" class="container-custom px-6 section-spacing">
 
-        <div class="card p-10 md:p-12 max-w-4xl mx-auto text-center relative overflow-hidden group">
+        <div class="card p-6 md:p-10 max-w-5xl mx-auto relative overflow-hidden">
 
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full blur-3xl opacity-10 bg-blue-500"></div>
             </div>
 
-            <div class="relative z-10 mb-6 inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-tr from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 transition-all duration-500 group-hover:scale-110">
-                <i data-lucide="message-square" class="w-10 h-10"></i>
-            </div>
+            <div class="relative z-10 grid lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-12 items-start">
 
-            <h2 class="section-title mb-4" data-i18n="contact_title"></h2>
+                <div>
+                    <div class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400">
+                        <i data-lucide="message-square" class="w-8 h-8"></i>
+                    </div>
 
-            <div class="w-20 h-1 mx-auto rounded-full mb-6" style="background:linear-gradient(to right,#3b82f6,#8b5cf6);"></div>
+                    <h2 class="section-title mb-4" data-i18n="contact_title"></h2>
 
-            <p class="opacity-60 mb-10 max-w-xl mx-auto leading-relaxed" data-i18n="contact_subtitle"></p>
+                    <div class="w-20 h-1 rounded-full mb-6" style="background:linear-gradient(to right,#3b82f6,#8b5cf6);"></div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <p class="opacity-65 leading-relaxed mb-8 max-w-xl" data-i18n="contact_subtitle"></p>
 
-                <a href="mailto:eisa.haider@outlook.com"
-                   data-i18n-url="contact_email"
-                   class="card p-5 flex flex-col items-center justify-center text-center hover:-translate-y-1 transition-all duration-300">
-                    <i data-lucide="mail" class="w-6 h-6 mb-3 opacity-80"></i>
-                    <span class="font-medium" data-i18n="contact_email"></span>
-                </a>
+                    <div class="rounded-xl border bg-white/[0.025] p-5"
+                         style="border-color:var(--border-color);">
+                        <div class="flex items-start gap-4">
+                            <div class="shrink-0 w-11 h-11 rounded-xl border flex items-center justify-center text-blue-400 bg-blue-500/10"
+                                 style="border-color:rgba(59,130,246,.28);">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </div>
 
-                <a href="https://wa.me/96566686499"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   data-i18n-url="contact_whatsapp"
-                   class="card p-5 flex flex-col items-center justify-center text-center hover:-translate-y-1 transition-all duration-300">
-                    <i data-lucide="phone" class="w-6 h-6 mb-3 opacity-80"></i>
-                    <span class="font-medium" data-i18n="contact_whatsapp"></span>
-                </a>
+                            <div>
+                                <h3 class="font-bold mb-1" data-i18n="contact_quick_title"></h3>
+                                <p class="text-sm opacity-60 mb-4" data-i18n="contact_quick_text"></p>
 
-                <a href="https://www.linkedin.com/in/eisa-haider"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   data-i18n-url="contact_linkedin"
-                   class="card p-5 flex flex-col items-center justify-center text-center hover:-translate-y-1 transition-all duration-300">
-                    <i data-lucide="briefcase" class="w-6 h-6 mb-3 opacity-80"></i>
-                    <span class="font-medium" data-i18n="contact_linkedin"></span>
-                </a>
+                                <a href="https://wa.me/96566686499"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   data-i18n-url="contact_whatsapp"
+                                   class="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold hover:bg-white/[0.05] transition-colors"
+                                   style="border-color:var(--border-color);">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                    <span data-i18n="contact_quick_button"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <a href="https://github.com/EisaHaider"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   data-i18n-url="contact_github"
-                   class="card p-5 flex flex-col items-center justify-center text-center hover:-translate-y-1 transition-all duration-300">
-                    <i data-lucide="code" class="w-6 h-6 mb-3 opacity-80"></i>
-                    <span class="font-medium" data-i18n="contact_github"></span>
-                </a>
+                <form id="contact-form" class="grid gap-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <label class="grid gap-2 text-sm font-medium">
+                            <span data-i18n="contact_name_label"></span>
+                            <input name="name"
+                                   required
+                                   data-i18n-placeholder="contact_name_placeholder"
+                                   class="w-full rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
+                                   style="border-color:var(--border-color);">
+                        </label>
+
+                        <label class="grid gap-2 text-sm font-medium">
+                            <span data-i18n="contact_email_label"></span>
+                            <input name="email"
+                                   type="email"
+                                   required
+                                   data-i18n-placeholder="contact_email_placeholder"
+                                   class="w-full rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
+                                   style="border-color:var(--border-color);">
+                        </label>
+                    </div>
+
+                    <label class="grid gap-2 text-sm font-medium">
+                        <span data-i18n="contact_phone_label"></span>
+                        <input name="phone"
+                               type="tel"
+                               data-i18n-placeholder="contact_phone_placeholder"
+                               class="w-full rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
+                               style="border-color:var(--border-color);">
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-medium">
+                        <span data-i18n="contact_message_label"></span>
+                        <textarea name="message"
+                                  required
+                                  rows="6"
+                                  data-i18n-placeholder="contact_message_placeholder"
+                                  class="w-full resize-none rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
+                                  style="border-color:var(--border-color);"></textarea>
+                    </label>
+
+                    <button type="submit"
+                            id="contact-submit"
+                            class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-950/20 hover:-translate-y-0.5 hover:bg-blue-400 hover:shadow-xl transition-all">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span data-i18n="contact_submit"></span>
+                    </button>
+
+                    <p id="contact-status" class="min-h-5 text-sm opacity-70"></p>
+                </form>
 
             </div>
 
