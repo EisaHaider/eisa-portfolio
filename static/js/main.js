@@ -34,14 +34,14 @@ const translations = {
         domain_1: "Enterprise Information Systems Analysis",
         domain_2: "Custom Application Development",
         domain_3: "Workflow Automation",
-        domain_4: "ERP & Business Systems",
+        domain_4: "ERP & Business Systems Solutions",
         domain_5: "Cloud-Native Solutions",
         domain_6: "Digital Skills Training",
 
         summary_title: "Professional Profile",
 
         odoo_label: "ERP & Business Systems",
-        odoo_title: "Odoo Implementation & Optimization",
+        odoo_title: "Odoo ERP Implementation & Optimization",
         odoo_description: "Helping organizations configure, adopt, and improve Odoo around real business workflows.",
         odoo_analyze_title: "Analyze",
         odoo_analyze_1: "Business Process Analysis",
@@ -149,7 +149,7 @@ const translations = {
         domain_1: "تحليل نظم المعلومات المؤسسية",
         domain_2: "تطوير التطبيقات المخصصة",
         domain_3: "أتمتة الإجراءات والعمليات",
-        domain_4: " أنظمة تخطيط الموارد",
+        domain_4: " حلول أنظمة تخطيط الموارد",
         domain_5: "الحلول السحابية",
         domain_6: "تنمية المهارات الرقمية",
 
@@ -169,7 +169,7 @@ const translations = {
         summary_title: "الملف المهني",
 
         odoo_label: "أنظمة الأعمال وتخطيط الموارد",
-        odoo_title: "تطبيق وتحسين Odoo",
+        odoo_title: "تنفيذ وتحسين حلول Odoo ERP",
         odoo_description: "مساعدة الأعمال التجارية على تهيئة Odoo وتبنّيه وتحسينه بما يتناسب مع إجراءات العمل الفعلية.",
         odoo_analyze_title: "التحليل",
         odoo_analyze_1: "تحليل إجراءات العمل",
