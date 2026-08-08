@@ -4,7 +4,7 @@ from html import escape
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, redirect, render_template, request
 
 
 from dotenv import load_dotenv  # استيراد المكتبة
@@ -17,16 +17,54 @@ def home():
     return render_template("index.html")
 
 
+@app.get("/whatsapp")
+def whatsapp():
+    whatsapp_url = os.environ.get("WHATSAPP_URL")
+    if not whatsapp_url:
+        return redirect("/")
+
+    return redirect(whatsapp_url)
+
+
 @app.post("/contact")
 def contact():
-    data = request.get_json(silent=True) or {}
+    data = request.get_json(silent=True) if request.is_json else request.form
+    data = data or {}
     name = (data.get("name") or "").strip()
     email = (data.get("email") or "").strip()
     phone = (data.get("phone") or "").strip()
     message = (data.get("message") or "").strip()
 
+    def contact_response(payload, status=200):
+        if request.is_json:
+            return jsonify(payload), status
+
+        heading = "Message Sent" if payload.get("ok") else "Message Not Sent"
+        text = escape(payload.get("message", ""))
+        return (
+            "<!doctype html>"
+            "<html lang='en' dir='ltr'>"
+            "<head>"
+            "<meta charset='utf-8'>"
+            "<meta name='viewport' content='width=device-width, initial-scale=1'>"
+            f"<title>{heading} | Eisa Haider</title>"
+            "<style>"
+            "body{margin:0;min-height:100vh;display:grid;place-items:center;"
+            "font-family:system-ui,-apple-system,Segoe UI,sans-serif;"
+            "background:#0f172a;color:#fff;padding:24px}"
+            "main{max-width:520px;border:1px solid #334155;border-radius:18px;"
+            "padding:28px;background:#111827}"
+            "a{color:#60a5fa}"
+            "</style>"
+            "</head>"
+            "<body>"
+            f"<main><h1>{heading}</h1><p>{text}</p>"
+            "<p><a href='/#contact'>Back to contact</a></p></main>"
+            "</body></html>"
+        ), status
+
     if not name or not email or not message:
-        return jsonify({"ok": False, "message": "Missing required fields."}), 400
+        return contact_response({"ok": False, "message": "Missing required fields."}, 400)
 
     # القراءة السليمة من متغيرات البيئة
     resend_api_key = os.environ.get("RESEND_API_KEY")
@@ -34,7 +72,7 @@ def contact():
     mail_from = os.environ.get("RESEND_FROM", "onboarding@resend.dev")
 
     if not resend_api_key:
-        return jsonify({"ok": False, "message": "Email service is not configured."}), 500
+        return contact_response({"ok": False, "message": "Email service is not configured."}, 500)
 
     safe_name = escape(name)
     safe_email = escape(email)
@@ -77,12 +115,12 @@ def contact():
     except HTTPError as e:
         error_response = e.read().decode("utf-8")
         app.logger.error(f"Resend API Error ({e.code}): {error_response}")
-        return jsonify({"ok": False, "message": f"Resend Error: {error_response}"}), 500
+        return contact_response({"ok": False, "message": "Message could not be sent."}, 500)
     except (URLError, RuntimeError) as e:
         app.logger.exception("Failed to send contact form email")
-        return jsonify({"ok": False, "message": "Message could not be sent."}), 500
+        return contact_response({"ok": False, "message": "Message could not be sent."}, 500)
 
-    return jsonify({"ok": True, "message": "Message sent successfully."})
+    return contact_response({"ok": True, "message": "Message sent successfully."})
 
 
 if __name__ == "__main__":

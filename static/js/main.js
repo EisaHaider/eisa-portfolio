@@ -138,7 +138,6 @@ const translations = {
         contact_quick_button: "Message on WhatsApp",
         contact_email_subject: "Portfolio Inquiry",
         contact_whatsapp: "WhatsApp",
-        contact_whatsapp_url: "https://wa.me/96566686499",
    
         language_button: "EN | AR",
         theme_button: "Theme",
@@ -292,7 +291,6 @@ const translations = {
         contact_quick_button: "التواصل عبر واتساب",
         contact_email_subject: "استفسار من الموقع الشخصي",
         contact_whatsapp: "WhatsApp",
-        contact_whatsapp_url: "https://wa.me/96566686499",
 
         language_button: "EN | AR",
         theme_button: "المظهر",
@@ -312,14 +310,6 @@ function updateTexts(lang) {
         const key = el.dataset.i18n;
         if (translations[lang][key]) {
             el.textContent = translations[lang][key];
-        }
-    });
-
-    document.querySelectorAll("[data-i18n-url]").forEach(el => {
-        const key = el.dataset.i18nUrl;
-        const urlKey = `${key}_url`;
-        if (translations[lang][urlKey]) {
-            el.href = translations[lang][urlKey];
         }
     });
 
