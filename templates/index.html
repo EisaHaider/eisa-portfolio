@@ -343,7 +343,13 @@ Eisa Haider | Information Systems Architect
                           style="border-color:var(--border-color);"
                           data-i18n="project_1_type"></span>
 
-                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_1_title"></h3>
+                    <div class="mt-5 mb-3 flex items-center gap-3">
+                        <div class="shrink-0 w-11 h-11 rounded-xl border flex items-center justify-center bg-blue-500/10 text-blue-400"
+                             style="border-color:rgba(59,130,246,.28);">
+                            <i data-lucide="archive" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold" data-i18n="project_1_title"></h3>
+                    </div>
                     <p class="text-base opacity-70 leading-relaxed" data-i18n="project_1_desc"></p>
                 </div>
 
@@ -384,7 +390,13 @@ Eisa Haider | Information Systems Architect
                           style="border-color:var(--border-color);"
                           data-i18n="project_2_type"></span>
 
-                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_2_title"></h3>
+                    <div class="mt-5 mb-3 flex items-center gap-3">
+                        <div class="shrink-0 w-11 h-11 rounded-xl border flex items-center justify-center bg-blue-500/10 text-blue-400"
+                             style="border-color:rgba(59,130,246,.28);">
+                            <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold" data-i18n="project_2_title"></h3>
+                    </div>
                     <p class="text-base opacity-70 leading-relaxed" data-i18n="project_2_desc"></p>
                 </div>
 
@@ -425,7 +437,13 @@ Eisa Haider | Information Systems Architect
                           style="border-color:var(--border-color);"
                           data-i18n="project_3_type"></span>
 
-                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_3_title"></h3>
+                    <div class="mt-5 mb-3 flex items-center gap-3">
+                        <div class="shrink-0 w-11 h-11 rounded-xl border flex items-center justify-center bg-blue-500/10 text-blue-400"
+                             style="border-color:rgba(59,130,246,.28);">
+                            <i data-lucide="kanban" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold" data-i18n="project_3_title"></h3>
+                    </div>
                     <p class="text-base opacity-70 leading-relaxed" data-i18n="project_3_desc"></p>
                 </div>
 
@@ -466,7 +484,13 @@ Eisa Haider | Information Systems Architect
                           style="border-color:var(--border-color);"
                           data-i18n="project_4_type"></span>
 
-                    <h3 class="text-2xl font-bold mt-5 mb-3" data-i18n="project_4_title"></h3>
+                    <div class="mt-5 mb-3 flex items-center gap-3">
+                        <div class="shrink-0 w-11 h-11 rounded-xl border flex items-center justify-center bg-blue-500/10 text-blue-400"
+                             style="border-color:rgba(59,130,246,.28);">
+                            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold" data-i18n="project_4_title"></h3>
+                    </div>
                     <p class="text-base opacity-70 leading-relaxed" data-i18n="project_4_desc"></p>
                 </div>
 
@@ -699,10 +723,14 @@ Eisa Haider | Information Systems Architect
 
 <footer class="py-8 text-center text-xs opacity-60">
     <div class="mb-4 inline-flex items-center justify-center gap-2.5 text-slate-400 font-sans">
-        <img src="{{ url_for('static', filename='images/eh-icon.png') }}"
-             alt="Eisa Haider"
-             class="h-8 w-8 rounded-full border object-cover opacity-85"
-             style="border-color:rgba(59,130,246,.35);">
+        <a href="#"
+           aria-label="Back to top"
+           class="inline-flex rounded-full transition-opacity hover:opacity-100 opacity-85">
+            <img src="{{ url_for('static', filename='images/eh-icon.png') }}"
+                 alt="Eisa Haider"
+                 class="h-8 w-8 rounded-full border object-cover"
+                 style="border-color:rgba(59,130,246,.35);">
+        </a>
 
         <!-- العبارة المبتكرة والعداد (إنجليزي دائماً بأرقام جافاسكريبت) -->
         <span class="text-slate-300 font-medium" dir="ltr">
