@@ -377,7 +377,7 @@ Eisa Haider | Information Systems Architect
                         </div>
 
                         <div>
-                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <h4 class="text-xs font-extrabold uppercase tracking-[0.18em] text-blue-400 mb-2" data-i18n="project_outcome_label"></h4>
                             <p class="text-sm leading-relaxed opacity-70" data-i18n="project_1_outcome"></p>
                         </div>
                     </div>
@@ -424,7 +424,7 @@ Eisa Haider | Information Systems Architect
                         </div>
 
                         <div>
-                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <h4 class="text-xs font-extrabold uppercase tracking-[0.18em] text-blue-400 mb-2" data-i18n="project_outcome_label"></h4>
                             <p class="text-sm leading-relaxed opacity-70" data-i18n="project_2_outcome"></p>
                         </div>
                     </div>
@@ -471,7 +471,7 @@ Eisa Haider | Information Systems Architect
                         </div>
 
                         <div>
-                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <h4 class="text-xs font-extrabold uppercase tracking-[0.18em] text-blue-400 mb-2" data-i18n="project_outcome_label"></h4>
                             <p class="text-sm leading-relaxed opacity-70" data-i18n="project_3_outcome"></p>
                         </div>
                     </div>
@@ -518,7 +518,7 @@ Eisa Haider | Information Systems Architect
                         </div>
 
                         <div>
-                            <h4 class="text-xs font-bold uppercase tracking-[0.18em] opacity-45 mb-2" data-i18n="project_outcome_label"></h4>
+                            <h4 class="text-xs font-extrabold uppercase tracking-[0.18em] text-blue-400 mb-2" data-i18n="project_outcome_label"></h4>
                             <p class="text-sm leading-relaxed opacity-70" data-i18n="project_4_outcome"></p>
                         </div>
 
@@ -694,7 +694,7 @@ Eisa Haider | Information Systems Architect
             <div class="inline-flex items-center gap-2 rounded-lg border bg-white/[0.025] px-3 py-2 text-xs font-semibold opacity-80"
                  style="border-color:var(--border-color);">
                 <i data-lucide="server" class="w-4 h-4 text-blue-400"></i>
-                <span>Python & Flask</span>
+                <span>Python / Flask</span>
             </div>
 
             <div class="inline-flex items-center gap-2 rounded-lg border bg-white/[0.025] px-3 py-2 text-xs font-semibold opacity-80"
@@ -711,6 +711,12 @@ Eisa Haider | Information Systems Architect
 
             <div class="inline-flex items-center gap-2 rounded-lg border bg-white/[0.025] px-3 py-2 text-xs font-semibold opacity-80"
                  style="border-color:var(--border-color);">
+                <i data-lucide="container" class="w-4 h-4 text-blue-400"></i>
+                <span>Docker</span>
+            </div>
+
+            <div class="inline-flex items-center gap-2 rounded-lg border bg-white/[0.025] px-3 py-2 text-xs font-semibold opacity-80"
+                 style="border-color:var(--border-color);">
                 <i data-lucide="cloud" class="w-4 h-4 text-blue-400"></i>
                 <span>Google Cloud Run</span>
             </div>
@@ -721,8 +727,9 @@ Eisa Haider | Information Systems Architect
 
 </section>
 
-<footer class="py-8 text-center text-xs opacity-60">
-    <div class="mb-4 inline-flex items-center justify-center gap-2.5 text-slate-400 font-sans">
+<footer class="py-8 text-center text-xs opacity-60 flex flex-col items-center justify-center gap-3">
+    <!-- 1. الصورة أولاً -->
+    <div>
         <a href="#"
            aria-label="Back to top"
            class="inline-flex rounded-full transition-opacity hover:opacity-100 opacity-85">
@@ -731,17 +738,18 @@ Eisa Haider | Information Systems Architect
                  class="h-8 w-8 rounded-full border object-cover"
                  style="border-color:rgba(59,130,246,.35);">
         </a>
+    </div>
 
-        <!-- العبارة المبتكرة والعداد (إنجليزي دائماً بأرقام جافاسكريبت) -->
+    <!-- 2. عداد الزيارات في سطر جديد -->
+    <div class="text-slate-400 font-sans">
         <span class="text-slate-300 font-medium" dir="ltr">
             Digital Handshakes: <span id="views-count" class="font-mono text-blue-400">...</span>
         </span>
     </div>
 
+    <!-- 3. جملة الحقوق في السطر الأخير -->
     <div class="text-slate-400 font-sans">
-        <!-- نص الحقوق المربوط بنظام الترجمة لديك -->
         <span data-i18n="copyright_text">
-            <!-- سيتم استبدال هذا النص تلقائياً عبر ملفات i18n -->
             © 2026 عيسى حيدر. جميع الحقوق محفوظة.
         </span>
     </div>

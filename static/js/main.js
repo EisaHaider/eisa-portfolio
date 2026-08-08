@@ -104,11 +104,11 @@ const translations = {
 
         project_4_type: "Cloud Web Application",
         project_4_title: "Student Services Portal",
-        project_4_desc: "A cloud-native student services portal that allows students and parents to retrieve examination seating information online while giving staff simple tools for data updates.",
-        project_4_challenge: "An educational institution needed online student services, including secure examination seating lookup by Civil ID and a simple administrative interface for non-technical staff to import Excel records each academic term.",
-        project_4_solution: "Designed and developed a responsive web application with secure student search, profile retrieval, role-based administration, Excel imports, bulk record management, audit logging, filtering, and administrative dashboards, with a modular architecture for future services.",
-        project_4_role: "Designed, developed, tested, deployed, and maintained the full solution independently, covering requirements analysis, database design, Python and Flask backend development, frontend implementation, Google Cloud Run deployment, GitHub source control, and ongoing enhancements.",
-        project_4_outcome: "The application is publicly deployed and actively used. It simplified administrative updates through Excel imports, supports seasonal traffic during examination periods, and has a separate open-source edition on GitHub.",
+        project_4_desc: "A cloud-based student services portal that enables students and parents to access examination committee information online, with simplified administrative tools for data updates and user management.",
+        project_4_challenge: "An educational institution needed to provide student services online, especially allowing students to retrieve examination seating and committee information using their Civil ID instead of relying on paper-based lists. The project also required an easy administrative interface for non-technical staff to update student records each academic term by importing Excel files exported from internal systems.",
+        project_4_solution: "Designed and developed a responsive web application that provides secure student lookup, data display and printing, user management, Excel import, bulk record updates, audit logging, search and filtering tools, and administrative dashboards. The solution also adopted a modular architecture that can support additional student services in the future without redesigning the system.",
+        project_4_role: "Delivered the project independently as a Full-Stack Developer, from requirements analysis and database design to backend development with Python and Flask, user interface implementation, deployment on Google Cloud Run, source code management through GitHub, and continuous improvements after launch.",
+        project_4_outcome: "The application is publicly deployed and actively used to deliver student services online. It simplified periodic data updates through Excel imports and provides a cloud-based architecture capable of handling high user demand during examination seasons while keeping operating costs low during the rest of the year. An open-source edition was also published on GitHub as a reference model for reuse and extension.",
         project_4_technology: "Python, Flask, SQLite, Bootstrap, JavaScript, HTML/CSS, Google Cloud Run, GitHub.",
 
         // نصوص اهتمامات Insights (تتوافق مع اسم القسم الموحد)
@@ -258,11 +258,11 @@ const translations = {
 
         project_4_type: "تطبيق ويب سحابي",
         project_4_title: "بوابة الخدمات الطلابية",
-        project_4_desc: "بوابة خدمات طلابية سحابية تتيح للطلاب وأولياء الأمور الوصول إلى بيانات الجلوس للاختبارات عبر الإنترنت، مع أدوات مبسطة لتحديث البيانات من قبل الموظفين.",
-        project_4_challenge: "احتاجت مؤسسة تعليمية إلى تقديم خدمات طلابية عبر الإنترنت، وأبرزها تمكين الطلاب من معرفة بيانات الجلوس للاختبارات باستخدام الرقم المدني، مع واجهة إدارية سهلة تتيح للموظفين غير التقنيين تحديث بيانات الطلاب عبر ملفات Excel كل فصل دراسي.",
-        project_4_solution: "صممت وطورت تطبيق ويب متجاوبًا يوفر بحثًا آمنًا للطلاب، واسترجاع بياناتهم، وإدارة حسب الأدوار، واستيراد Excel، وإدارة سجلات جماعية، وسجل تدقيق، وبحثًا وتصفية، ولوحات إدارية، مع بنية قابلة للتوسع لإضافة خدمات مستقبلية.",
-        project_4_role: "صممت وطورت واختبرت ونشرت وصنت الحل بالكامل بشكل مستقل، بما في ذلك تحليل المتطلبات، تصميم قاعدة البيانات، تطوير الخلفية باستخدام Python وFlask، تنفيذ الواجهة، النشر على Google Cloud Run، إدارة الكود عبر GitHub، والتحسينات اللاحقة.",
-        project_4_outcome: "التطبيق منشور ويُستخدم فعليًا لتقديم الخدمات الطلابية عبر الإنترنت. ساعد على تبسيط تحديث البيانات من خلال استيراد Excel، ودعم فترات الضغط الموسمية أثناء الاختبارات، كما تم نشر نسخة مفتوحة المصدر منه على GitHub.",
+        project_4_desc: "بوابة خدمات طلابية سحابية تُمكّن الطلاب وأولياء الأمور من الوصول إلى بيانات لجان الاختبارات عبر الإنترنت، مع أدوات إدارية مبسطة لتحديث البيانات وإدارة المستخدمين.",
+        project_4_challenge: "احتاجت إحدى المؤسسات التعليمية إلى توفير خدمات طلابية عبر الإنترنت، وفي مقدمتها تمكين الطلاب من الاستعلام عن بيانات الجلوس للاختبارات باستخدام الرقم المدني، بدلاً من الاعتماد على الكشوف الورقية. كما تطلب المشروع توفير واجهة إدارية سهلة الاستخدام تتيح للموظفين غير التقنيين تحديث بيانات الطلاب في كل فصل دراسي عبر استيراد ملفات Excel المستخرجة من الأنظمة الداخلية.",
+        project_4_solution: "صممت وطورت تطبيق ويب متجاوبًا يوفر بحثًا آمنًا عن بيانات الطلاب، وعرضها وطباعتها، مع نظام لإدارة المستخدمين، واستيراد ملفات Excel، وتحديث السجلات بشكل جماعي، وسجل تدقيق، وأدوات بحث وتصفية، ولوحات تحكم إدارية. كما اعتمدت بنية معيارية قابلة للتوسع لإضافة خدمات طلابية جديدة مستقبلًا دون الحاجة إلى إعادة تصميم النظام.",
+        project_4_role: "نفذت المشروع بالكامل بشكل مستقل بصفتي Full-Stack Developer، بدءًا من تحليل المتطلبات وتصميم قاعدة البيانات، مرورًا بتطوير الواجهة الخلفية باستخدام Python وFlask، وتطوير واجهة المستخدم، ووصولًا إلى النشر على Google Cloud Run، وإدارة الشفرة المصدرية عبر GitHub، وتقديم التحسينات المستمرة بعد الإطلاق.",
+        project_4_outcome: "التطبيق منشور ويُستخدم فعليًا لتقديم الخدمات الطلابية عبر الإنترنت، وأسهم في تبسيط تحديث البيانات الدورية من خلال استيراد ملفات Excel، مع توفير بنية سحابية قادرة على استيعاب الزيادة الكبيرة في عدد المستخدمين خلال مواسم الاختبارات مع الحفاظ على انخفاض تكاليف التشغيل بقية العام. كما نُشرت نسخة مفتوحة المصدر من المشروع على GitHub كنموذج مرجعي قابل للتطوير وإعادة الاستخدام.",
         project_4_technology: "Python, Flask, SQLite, Bootstrap, JavaScript, HTML/CSS, Google Cloud Run, GitHub.",
 
         // نصوص اهتمامات Insights
