@@ -29,17 +29,34 @@ Eisa Haider | Information Systems Architect
 
                     <a href="#odoo" data-i18n="nav_odoo">Odoo ERP</a>
 
+                    <a href="#filemaker" data-i18n="nav_filemaker">FileMaker Platform</a>
+
                     <a href="#projects" data-i18n="nav_projects">Projects</a>
 
                     <a href="#domains" data-i18n="nav_domains">Areas of Expertise</a>
-
-                    <a href="#insights" data-i18n="nav_insights">Beyond Systems</a>
 
                     <a href="#contact" data-i18n="nav_contact">Contact</a>
 
                 </div>
 
                 <div class="flex items-center gap-3">
+
+                    <details id="mobile-menu" class="relative lg:hidden">
+                        <summary aria-label="Menu"
+                                 class="list-none inline-flex h-10 w-12 cursor-pointer items-center justify-center rounded-xl border">
+                            <i data-lucide="menu" class="w-5 h-5"></i>
+                        </summary>
+
+                        <div class="absolute end-0 top-full mt-3 w-64 rounded-xl border bg-[var(--card-bg)] p-3 text-start shadow-2xl shadow-black/20"
+                             style="border-color:var(--border-color);">
+                            <a href="#profile" class="block rounded-lg px-3 py-2 hover:bg-white/[0.05]" data-i18n="nav_profile">Profile</a>
+                            <a href="#odoo" class="block rounded-lg px-3 py-2 hover:bg-white/[0.05]" data-i18n="nav_odoo">Odoo ERP</a>
+                            <a href="#filemaker" class="block rounded-lg px-3 py-2 hover:bg-white/[0.05]" data-i18n="nav_filemaker">FileMaker Platform</a>
+                            <a href="#projects" class="block rounded-lg px-3 py-2 hover:bg-white/[0.05]" data-i18n="nav_projects">Projects</a>
+                            <a href="#domains" class="block rounded-lg px-3 py-2 hover:bg-white/[0.05]" data-i18n="nav_domains">Areas of Expertise</a>
+                            <a href="#contact" class="block rounded-lg px-3 py-2 hover:bg-white/[0.05]" data-i18n="nav_contact">Contact</a>
+                        </div>
+                    </details>
 
                     <button id="language-toggle" class="px-4 py-2 rounded-xl border" data-i18n="language_button">EN | AR</button>
 

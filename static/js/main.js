@@ -6,10 +6,12 @@ const translations = {
 
         nav_profile: "Profile",
         nav_odoo: "Odoo ERP",
+        nav_filemaker: "FileMaker Platform",
         nav_projects: "Projects",
         nav_domains: "Areas of Expertise",
         nav_insights: "Beyond Systems",
         nav_contact: "Contact",
+        nav_menu: "Menu",
 
         hero_title: "Systems Analyst & Custom Application Developer",
 
@@ -184,10 +186,12 @@ const translations = {
 
         nav_profile: "الملف المهني",
         nav_odoo: "Odoo ERP",
+        nav_filemaker: "FileMaker Platform",
         nav_projects: "المشاريع",
         nav_domains: "مجالات الخبرة",
         nav_insights: "خارج إطار العمل",
         nav_contact: "التواصل",
+        nav_menu: "القائمة",
 
         hero_title: "محلل نظم ومطور تطبيقات مخصصة",
 
@@ -493,6 +497,19 @@ function setupContactForm() {
     });
 }
 
+function setupMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+    if (!menu) {
+        return;
+    }
+
+    menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.open = false;
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("language") || "en";
     const savedTheme = localStorage.getItem("theme") || "dark";
@@ -515,5 +532,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setupContactForm();
+    setupMobileMenu();
     revealElements();
 });
