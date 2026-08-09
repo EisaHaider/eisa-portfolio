@@ -105,7 +105,7 @@ const translations = {
         project_solution_label: "Analysis & Solution",
         project_role_label: "My Role",
         project_outcome_label: "Outcome",
-        project_technology_label: "Technology",
+        project_technology_label: "Technologies & Platforms",
         project_details_label: "Read case study",
 
         project_1_type: "Enterprise Records Platform",
@@ -288,7 +288,7 @@ const translations = {
         project_solution_label: "التحليل والحل",
         project_role_label: "دوري",
         project_outcome_label: "الأثر",
-        project_technology_label: "التقنيات",
+        project_technology_label: "التقنيات والمنصات",
         project_details_label: "قراءة دراسة الحالة",
 
         project_1_type: "منصة سجلات مؤسسية",
