@@ -1,10 +1,11 @@
 import os
 import json
+from datetime import date
 from html import escape
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from flask import Flask, jsonify, redirect, render_template, request
+from flask import Flask, Response, jsonify, redirect, render_template, request, url_for
 
 
 from dotenv import load_dotenv  # استيراد المكتبة
@@ -15,6 +16,56 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
+def canonical_url(path="/"):
+    if not path.startswith("/"):
+        path = f"/{path}"
+
+    site_url = os.environ.get("SITE_URL", "").strip().rstrip("/")
+    if site_url:
+        return f"{site_url}{path}"
+
+    return f"{request.url_root.rstrip('/')}{path}"
+
+
+@app.get("/sitemap.xml")
+def sitemap():
+    lastmod = os.environ.get("SITEMAP_LASTMOD", date.today().isoformat())
+    pages = [
+        {
+            "loc": canonical_url("/"),
+            "lastmod": lastmod,
+            "changefreq": "monthly",
+            "priority": "1.0",
+        }
+    ]
+
+    xml = ['<?xml version="1.0" encoding="UTF-8"?>']
+    xml.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+
+    for page in pages:
+        xml.append("  <url>")
+        xml.append(f"    <loc>{escape(page['loc'])}</loc>")
+        xml.append(f"    <lastmod>{page['lastmod']}</lastmod>")
+        xml.append(f"    <changefreq>{page['changefreq']}</changefreq>")
+        xml.append(f"    <priority>{page['priority']}</priority>")
+        xml.append("  </url>")
+
+    xml.append("</urlset>")
+
+    return Response("\n".join(xml), mimetype="application/xml")
+
+
+@app.get("/robots.txt")
+def robots():
+    content = (
+        "User-agent: *\n"
+        "Allow: /\n\n"
+        f"Sitemap: {canonical_url('/sitemap.xml')}\n"
+    )
+
+    return Response(content, mimetype="text/plain")
 
 
 @app.get("/whatsapp")
