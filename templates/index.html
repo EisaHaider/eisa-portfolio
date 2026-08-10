@@ -840,42 +840,70 @@ Eisa Haider | Information Systems Architect
                       class="grid gap-4">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <label class="grid gap-2 text-sm font-medium">
-                            <span data-i18n="contact_name_label">Name</span>
+                            <span class="inline-flex items-center gap-1.5">
+                                <span data-i18n="contact_name_label">Name</span>
+                                <span class="text-blue-400" aria-hidden="true">*</span>
+                            </span>
                             <input name="name"
                                    required
+                                   aria-describedby="contact-name-hint"
                                    data-i18n-placeholder="contact_name_placeholder"
                                    class="w-full rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
                                    style="border-color:var(--border-color);" placeholder="Your name">
+                            <span id="contact-name-hint"
+                                  class="text-xs font-normal leading-relaxed opacity-45"
+                                  data-i18n="contact_name_hint">How should I address you?</span>
                         </label>
 
                         <label class="grid gap-2 text-sm font-medium">
-                            <span data-i18n="contact_email_label">Email</span>
+                            <span class="inline-flex items-center gap-1.5">
+                                <span data-i18n="contact_email_label">Email</span>
+                                <span class="text-blue-400" aria-hidden="true">*</span>
+                            </span>
                             <input name="email"
                                    type="email"
                                    required
+                                   aria-describedby="contact-email-hint"
                                    data-i18n-placeholder="contact_email_placeholder"
                                    class="w-full rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
                                    style="border-color:var(--border-color);" placeholder="your@email.com">
+                            <span id="contact-email-hint"
+                                  class="text-xs font-normal leading-relaxed opacity-45"
+                                  data-i18n="contact_email_hint">A reply address for this conversation.</span>
                         </label>
                     </div>
 
                     <label class="grid gap-2 text-sm font-medium">
-                        <span data-i18n="contact_phone_label">Phone</span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <span data-i18n="contact_phone_label">Phone</span>
+                            <span class="text-xs font-normal opacity-45" data-i18n="contact_optional_label">Optional</span>
+                        </span>
                         <input name="phone"
                                type="tel"
+                               aria-describedby="contact-phone-hint"
                                data-i18n-placeholder="contact_phone_placeholder"
                                class="w-full rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
                                style="border-color:var(--border-color);" placeholder="Optional">
+                        <span id="contact-phone-hint"
+                              class="text-xs font-normal leading-relaxed opacity-45"
+                              data-i18n="contact_phone_hint">Useful if a quick call or WhatsApp follow-up is easier.</span>
                     </label>
 
                     <label class="grid gap-2 text-sm font-medium">
-                        <span data-i18n="contact_message_label">Message</span>
+                        <span class="inline-flex items-center gap-1.5">
+                            <span data-i18n="contact_message_label">Message</span>
+                            <span class="text-blue-400" aria-hidden="true">*</span>
+                        </span>
                         <textarea name="message"
                                   required
                                   rows="6"
+                                  aria-describedby="contact-message-hint"
                                   data-i18n-placeholder="contact_message_placeholder"
                                   class="w-full resize-none rounded-xl border bg-white/[0.025] px-4 py-3 outline-none transition-colors focus:border-blue-400"
                                   style="border-color:var(--border-color);" placeholder="Share a few details about what you would like to discuss."></textarea>
+                        <span id="contact-message-hint"
+                              class="text-xs font-normal leading-relaxed opacity-45"
+                              data-i18n="contact_message_hint">A short overview of your idea, workflow, or support need is enough.</span>
                     </label>
 
                     <button type="submit"
