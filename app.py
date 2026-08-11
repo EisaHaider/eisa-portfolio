@@ -81,6 +81,7 @@ def whatsapp():
 def contact():
     data = request.get_json(silent=True) if request.is_json else request.form
     data = data or {}
+    honeypot = (data.get("company_website") or "").strip()
     name = (data.get("name") or "").strip()
     email = (data.get("email") or "").strip()
     phone = (data.get("phone") or "").strip()
@@ -113,6 +114,10 @@ def contact():
             "<p><a href='/#contact'>Back to contact</a></p></main>"
             "</body></html>"
         ), status
+
+    if honeypot:
+        app.logger.info("Blocked contact form honeypot submission")
+        return contact_response({"ok": True, "message": "Message sent successfully."})
 
     if not name or not email or not message:
         return contact_response({"ok": False, "message": "Missing required fields."}, 400)

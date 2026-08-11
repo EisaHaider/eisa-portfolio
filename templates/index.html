@@ -838,6 +838,16 @@ Eisa Haider | Information Systems Architect
                       method="post"
                       action="{{ url_for('contact') }}"
                       class="grid gap-4">
+                    <div class="hidden" aria-hidden="true">
+                        <label>
+                            Company website
+                            <input name="company_website"
+                                   type="text"
+                                   tabindex="-1"
+                                   autocomplete="off">
+                        </label>
+                    </div>
+
                     <div class="grid sm:grid-cols-2 gap-4">
                         <label class="grid gap-2 text-sm font-medium">
                             <span class="inline-flex items-center gap-1.5">
