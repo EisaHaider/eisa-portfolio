@@ -13,6 +13,13 @@ load_dotenv()  # تحميل المتغيرات من ملف .env
 app = Flask(__name__)
 
 
+@app.before_request
+def redirect_www_to_apex():
+    if request.host == "www.eisahaider.online":
+        target = f"https://eisahaider.online{request.full_path}".rstrip("?")
+        return redirect(target, code=301)
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
