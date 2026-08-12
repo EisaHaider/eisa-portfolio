@@ -21,9 +21,9 @@ def home():
 @app.get("/favicon.ico")
 def favicon():
     return send_from_directory(
-        os.path.join(app.root_path, "static", "images"),
-        "eh-icon.png",
-        mimetype="image/png",
+        os.path.join(app.root_path, "static"),
+        "favicon.ico",
+        mimetype="image/vnd.microsoft.icon",
     )
 
 
