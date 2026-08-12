@@ -5,7 +5,7 @@ from html import escape
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from flask import Flask, Response, jsonify, redirect, render_template, request, url_for
+from flask import Flask, Response, jsonify, redirect, render_template, request, send_from_directory, url_for
 
 
 from dotenv import load_dotenv  # استيراد المكتبة
@@ -16,6 +16,15 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
+@app.get("/favicon.ico")
+def favicon():
+    return send_from_directory(
+        os.path.join(app.root_path, "static", "images"),
+        "eh-icon.png",
+        mimetype="image/png",
+    )
 
 
 def canonical_url(path="/"):
