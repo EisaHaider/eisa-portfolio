@@ -457,6 +457,7 @@ function setupContactForm() {
         const lang = localStorage.getItem("language") || "en";
         const data = new FormData(form);
         const payload = {
+            company_website: data.get("company_website") || "",
             name: data.get("name") || "",
             email: data.get("email") || "",
             phone: data.get("phone") || "",
@@ -507,6 +508,24 @@ function setupContactForm() {
     });
 }
 
+function setupViewCounter() {
+    const countElem = document.getElementById("views-count");
+    if (!countElem) {
+        return;
+    }
+
+    fetch("https://countapi.mileshilliard.com/api/v1/hit/eisa_haider_online")
+        .then(res => res.json())
+        .then(data => {
+            if (data.value) {
+                countElem.textContent = data.value;
+            }
+        })
+        .catch(() => {
+            countElem.textContent = "-";
+        });
+}
+
 function setupMobileMenu() {
     const menu = document.getElementById("mobile-menu");
     if (!menu) {
@@ -542,6 +561,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setupContactForm();
+    setupViewCounter();
     setupMobileMenu();
     revealElements();
 });

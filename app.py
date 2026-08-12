@@ -1,23 +1,66 @@
 import os
 import json
+import secrets
+import time
+from collections import defaultdict, deque
 from datetime import date
 from html import escape
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from flask import Flask, Response, jsonify, redirect, render_template, request, send_from_directory, url_for
+from flask import Flask, Response, g, jsonify, redirect, render_template, request, send_from_directory, url_for
 
 
 from dotenv import load_dotenv  # استيراد المكتبة
 load_dotenv()  # تحميل المتغيرات من ملف .env
 app = Flask(__name__)
+CONTACT_RATE_LIMIT = int(os.environ.get("CONTACT_RATE_LIMIT", 3))
+CONTACT_RATE_WINDOW = int(os.environ.get("CONTACT_RATE_WINDOW", 600))
+contact_attempts = defaultdict(deque)
 
 
 @app.before_request
-def redirect_www_to_apex():
+def prepare_request():
+    g.csp_nonce = secrets.token_urlsafe(16)
+
     if request.host == "www.eisahaider.online":
         target = f"https://eisahaider.online{request.full_path}".rstrip("?")
         return redirect(target, code=301)
+
+
+@app.after_request
+def add_security_headers(response):
+    nonce = getattr(g, "csp_nonce", "")
+    csp = (
+        "default-src 'self'; "
+        f"script-src 'self' https://unpkg.com 'nonce-{nonce}'; "
+        "style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; "
+        "font-src 'self' https://fonts.gstatic.com; "
+        "img-src 'self' data: https://eisahaider.online; "
+        "connect-src 'self' https://countapi.mileshilliard.com; "
+        "object-src 'none'; "
+        "base-uri 'self'; "
+        "form-action 'self'; "
+        "frame-ancestors 'none'; "
+        "upgrade-insecure-requests"
+    )
+
+    response.headers["Content-Security-Policy"] = csp
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=(), payment=()"
+    response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
+
+    if request.is_secure or request.headers.get("X-Forwarded-Proto") == "https":
+        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+
+    return response
+
+
+@app.context_processor
+def inject_security_context():
+    return {"csp_nonce": getattr(g, "csp_nonce", "")}
 
 
 @app.route("/")
@@ -43,6 +86,29 @@ def canonical_url(path="/"):
         return f"{site_url}{path}"
 
     return f"{request.url_root.rstrip('/')}{path}"
+
+
+def client_ip():
+    forwarded_for = request.headers.get("X-Forwarded-For", "")
+    if forwarded_for:
+        return forwarded_for.split(",")[0].strip()
+
+    return request.remote_addr or "unknown"
+
+
+def contact_rate_limited():
+    now = time.monotonic()
+    key = client_ip()
+    attempts = contact_attempts[key]
+
+    while attempts and now - attempts[0] > CONTACT_RATE_WINDOW:
+        attempts.popleft()
+
+    if len(attempts) >= CONTACT_RATE_LIMIT:
+        return True
+
+    attempts.append(now)
+    return False
 
 
 @app.get("/sitemap.xml")
@@ -137,6 +203,10 @@ def contact():
 
     if not name or not email or not message:
         return contact_response({"ok": False, "message": "Missing required fields."}, 400)
+
+    if contact_rate_limited():
+        app.logger.warning("Blocked contact form rate limit for IP %s", client_ip())
+        return contact_response({"ok": False, "message": "Too many messages. Please try again later."}, 429)
 
     # القراءة السليمة من متغيرات البيئة
     resend_api_key = os.environ.get("RESEND_API_KEY")
