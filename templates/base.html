@@ -15,16 +15,16 @@
     </title>
 
     <meta name="description"
-          content="Eisa Haider designs and builds business systems, workflow automation, Odoo ERP, FileMaker solutions, and cloud-ready web applications.">
+          content="Portfolio of Eisa Haider, an information systems professional building custom business applications, workflow automation, Odoo ERP, FileMaker solutions, and cloud-ready web systems.">
 
-    <meta name="keywords"
-          content="Eisa Haider, information systems, business systems, custom applications, workflow automation, Odoo ERP, FileMaker solutions, Flask developer, cloud applications, Google Cloud Run, database design, Kuwait">
+    <link rel="canonical"
+          href="https://eisahaider.online/">
 
     <meta property="og:title"
           content="Eisa Haider | Information Systems Architect">
 
     <meta property="og:description"
-          content="Business systems, workflow automation, Odoo ERP, FileMaker solutions, and cloud-ready web applications.">
+          content="Portfolio of Eisa Haider, an information systems professional building custom business applications, workflow automation, Odoo ERP, FileMaker solutions, and cloud-ready web systems.">
 
     <meta property="og:type"
           content="website">
@@ -39,10 +39,67 @@
           content="Eisa Haider | Information Systems Architect">
 
     <meta name="twitter:description"
-          content="Business systems, workflow automation, Odoo ERP, FileMaker solutions, and cloud-ready web applications.">
+          content="Portfolio of Eisa Haider, an information systems professional building custom business applications, workflow automation, Odoo ERP, FileMaker solutions, and cloud-ready web systems.">
 
     <meta name="twitter:image"
           content="{{ url_for('static', filename='images/eh-icon.png', _external=True) }}">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Eisa Haider",
+            "url": "https://eisahaider.online/",
+            "image": "{{ url_for('static', filename='images/eh-icon.png', _external=True) }}",
+            "jobTitle": "Information Systems Professional",
+            "description": "Information systems professional building custom business applications, workflow automation, Odoo ERP, FileMaker solutions, and cloud-ready web systems.",
+            "knowsAbout": [
+                "Information Systems",
+                "Custom Business Applications",
+                "Workflow Automation",
+                "Odoo ERP",
+                "FileMaker Solutions",
+                "Database Design",
+                "Python",
+                "Flask",
+                "Cloud Applications"
+            ],
+            "offers": {
+                "@type": "OfferCatalog",
+                "name": "Business Systems Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Custom Business Application Development"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Odoo ERP Implementation and Optimization"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Professional FileMaker Solutions"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Workflow Automation and Information Systems Consulting"
+                        }
+                    }
+                ]
+            }
+        }
+    </script>
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
