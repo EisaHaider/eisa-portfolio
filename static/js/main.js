@@ -32,6 +32,7 @@ const translations = {
         hero_step3_desc: "Improve with users over time",
 
         domains_title: "Areas of Expertise",
+        domains_intro: "Experience shaped by working with systems and users, from understanding needs to building practical, usable solutions.",
 
         domain_1: "Enterprise Information Systems Analysis",
         domain_2: "Custom Application Development",
@@ -207,6 +208,7 @@ const translations = {
         btn_projects: "المشاريع المختارة",
 
         domains_title: "مجالات الخبرة",
+        domains_intro: "خبرة تشكّلت من العمل مع الأنظمة والمستخدمين، من فهم الاحتياج إلى بناء حلول عملية قابلة للاستخدام.",
 
         domain_1: "تحليل نظم المعلومات المؤسسية",
         domain_2: "تطوير التطبيقات المخصصة",
