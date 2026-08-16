@@ -16,6 +16,8 @@ load_dotenv()  # تحميل المتغيرات من ملف .env
 app = Flask(__name__)
 CONTACT_RATE_LIMIT = int(os.environ.get("CONTACT_RATE_LIMIT", 3))
 CONTACT_RATE_WINDOW = int(os.environ.get("CONTACT_RATE_WINDOW", 600))
+DEFAULT_SITE_URL = "https://eisahaider.online"
+LOCAL_HOSTS = {"localhost", "127.0.0.1", "0.0.0.0"}
 contact_attempts = defaultdict(deque)
 
 
@@ -23,8 +25,12 @@ contact_attempts = defaultdict(deque)
 def prepare_request():
     g.csp_nonce = secrets.token_urlsafe(16)
 
-    if request.host == "www.eisahaider.online":
-        target = f"https://eisahaider.online{request.full_path}".rstrip("?")
+    canonical_site = os.environ.get("SITE_URL", DEFAULT_SITE_URL).strip().rstrip("/")
+    canonical_host = canonical_site.replace("https://", "").replace("http://", "").split("/")[0]
+    request_host = request.host.split(":")[0].lower()
+
+    if request_host not in LOCAL_HOSTS and request_host != canonical_host:
+        target = f"{canonical_site}{request.full_path}".rstrip("?")
         return redirect(target, code=301)
 
 
@@ -81,7 +87,7 @@ def canonical_url(path="/"):
     if not path.startswith("/"):
         path = f"/{path}"
 
-    site_url = os.environ.get("SITE_URL", "").strip().rstrip("/")
+    site_url = os.environ.get("SITE_URL", DEFAULT_SITE_URL).strip().rstrip("/")
     if site_url:
         return f"{site_url}{path}"
 
