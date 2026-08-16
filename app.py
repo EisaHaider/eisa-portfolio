@@ -33,11 +33,11 @@ def add_security_headers(response):
     nonce = getattr(g, "csp_nonce", "")
     csp = (
         "default-src 'self'; "
-        f"script-src 'self' https://unpkg.com 'nonce-{nonce}'; "
+        f"script-src 'self' https://unpkg.com https://plausible.io 'nonce-{nonce}'; "
         "style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; "
         "font-src 'self' https://fonts.gstatic.com; "
         "img-src 'self' data: https://eisahaider.online; "
-        "connect-src 'self' https://countapi.mileshilliard.com; "
+        "connect-src 'self' https://countapi.mileshilliard.com https://plausible.io; "
         "object-src 'none'; "
         "base-uri 'self'; "
         "form-action 'self'; "
